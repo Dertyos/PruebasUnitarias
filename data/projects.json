@@ -1,0 +1,44 @@
+{
+  "proyectos": [
+    {
+      "proyecto_id": "e3101d84-2217-452d-80e3-3a2449f80bd0",
+      "nombre": "Birds recognition",
+      "descripcion": "dbbb",
+      "propietario_id": "efcfe9b4-df9e-43ea-a15c-f46be2cc78b7",
+      "columnas": [
+        {
+          "columna_id": "87d3253f-71e3-4da5-a887-1d93d9f0dace",
+          "nombre": "Pendiente",
+          "orden": 0,
+          "tareas": [],
+          "fecha_creacion": "2025-11-09T17:23:35.645524"
+        },
+        {
+          "columna_id": "6998c89c-58d7-401d-9186-e0503711d80c",
+          "nombre": "En Progreso",
+          "orden": 1,
+          "tareas": [],
+          "fecha_creacion": "2025-11-09T17:23:35.645540"
+        },
+        {
+          "columna_id": "c634b5aa-af58-4505-9f2c-23be1cb50587",
+          "nombre": "Completada",
+          "orden": 2,
+          "tareas": [],
+          "fecha_creacion": "2025-11-09T17:23:35.645551"
+        }
+      ],
+      "miembros": [],
+      "fecha_creacion": "2025-11-09T17:23:35.645487",
+      "fecha_modificacion": "2025-11-09T17:23:35.645553"
+    }
+  ],
+  "usuarios": [
+    {
+      "usuario_id": "efcfe9b4-df9e-43ea-a15c-f46be2cc78b7",
+      "nombre": "Julian",
+      "email": "julian@gmail.com",
+      "fecha_creacion": "2025-11-09T17:22:49.151718"
+    }
+  ]
+}
