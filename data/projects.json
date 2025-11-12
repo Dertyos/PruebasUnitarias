@@ -31,6 +31,38 @@
       "miembros": [],
       "fecha_creacion": "2025-11-09T17:23:35.645487",
       "fecha_modificacion": "2025-11-09T17:23:35.645553"
+    },
+    {
+      "proyecto_id": "5c0523fa-4624-495f-a2c3-2843d4cff475",
+      "nombre": "Proyecto Persistente",
+      "descripcion": "Prueba",
+      "propietario_id": null,
+      "columnas": [
+        {
+          "columna_id": "ac844e9e-258f-4599-b4a7-ab0844afeefe",
+          "nombre": "Pendiente",
+          "orden": 0,
+          "tareas": [],
+          "fecha_creacion": "2025-11-10T00:24:59.374378"
+        },
+        {
+          "columna_id": "d6a6d2d6-4459-4874-b49a-7c7f18e2818f",
+          "nombre": "En Progreso",
+          "orden": 1,
+          "tareas": [],
+          "fecha_creacion": "2025-11-10T00:24:59.374386"
+        },
+        {
+          "columna_id": "f301e14e-7a58-45d5-bc58-ac1c9e3d5d45",
+          "nombre": "Completada",
+          "orden": 2,
+          "tareas": [],
+          "fecha_creacion": "2025-11-10T00:24:59.374393"
+        }
+      ],
+      "miembros": [],
+      "fecha_creacion": "2025-11-10T00:24:59.374368",
+      "fecha_modificacion": "2025-11-10T00:24:59.374394"
     }
   ],
   "usuarios": [
@@ -39,6 +71,54 @@
       "nombre": "Julian",
       "email": "julian@gmail.com",
       "fecha_creacion": "2025-11-09T17:22:49.151718"
+    },
+    {
+      "usuario_id": "b9f82fd8-92d8-4731-932c-4e652001e13c",
+      "nombre": "julian",
+      "email": "julian@gmail.com",
+      "fecha_creacion": "2025-11-10T00:12:10.997198"
+    },
+    {
+      "usuario_id": "bc3e25a3-4ec2-4d5d-83e8-4d060cda99b5",
+      "nombre": "David",
+      "email": "julian@gmail.com",
+      "fecha_creacion": "2025-11-10T00:12:20.572593"
+    },
+    {
+      "usuario_id": "d85bc6f5-b9d4-4e58-a8e7-8863cd5dbeb3",
+      "nombre": "Persistente",
+      "email": "persistente@example.com",
+      "fecha_creacion": "2025-11-10T00:24:59.373682"
+    },
+    {
+      "usuario_id": "ff341e67-5c02-495e-8200-0fc8f635646b",
+      "nombre": "Ana Tester",
+      "email": "ana.tester@example.com",
+      "fecha_creacion": "2025-11-12T14:24:16.028252"
+    },
+    {
+      "usuario_id": "6a2c5260-2b08-4157-a866-3ce44bc2096f",
+      "nombre": "Persist QA",
+      "email": "persist.qa@example.com",
+      "fecha_creacion": "2025-11-12T14:24:16.029578"
+    },
+    {
+      "usuario_id": "d0bcd21b-fd56-4f73-af60-698897b2a3c0",
+      "nombre": "Ana Tester",
+      "email": "ana.tester@example.com",
+      "fecha_creacion": "2025-11-12T14:24:52.945229"
+    },
+    {
+      "usuario_id": "8f33b9b3-c070-40f3-ab44-466c5c7b62cd",
+      "nombre": "Persist QA",
+      "email": "persist.qa@example.com",
+      "fecha_creacion": "2025-11-12T14:24:52.946604"
+    },
+    {
+      "usuario_id": "26c2d295-6562-4101-91f7-7e7d1ce52aa2",
+      "nombre": "Persist QA",
+      "email": "persist.qa@example.com",
+      "fecha_creacion": "2025-11-12T14:25:54.252058"
     }
   ]
 }

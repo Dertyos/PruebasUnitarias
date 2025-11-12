@@ -1,0 +1,334 @@
+[
+  {
+    "title": "HU-003 CA-1 - Crear tarea con título obligatorio",
+    "description": "Validar que el usuario puede crear una nueva tarea especificando título (obligatorio).",
+    "preconditions": "Proyecto actual abierto con columnas por defecto: Pendiente, En Progreso, Completada.",
+    "priority": "Critical",
+    "status": "Ready",
+    "type": "Functional",
+    "owner": "Julian",
+    "steps": [
+      {"stepDescription": "En el menú principal, oprimir '3' (Trabajar con Proyecto Actual).", "data": "3", "expectedResults": "Se muestra el menú del Proyecto Actual."},
+      {"stepDescription": "En el menú del Proyecto, oprimir '2' (Agregar tarea).", "data": "2", "expectedResults": "Se muestra 'AGREGAR NUEVA TAREA'."},
+      {"stepDescription": "Cuando el sistema solicite 'Titulo de la tarea:', escribir 'Tarea CA1' y presionar Enter.", "data": "Tarea CA1", "expectedResults": "El título es aceptado."},
+      {"stepDescription": "Cuando el sistema solicite 'Descripcion (opcional):', escribir 'Detalle inicial' y presionar Enter.", "data": "Detalle inicial", "expectedResults": "La descripción es aceptada."},
+      {"stepDescription": "Cuando el sistema solicite 'Seleccione prioridad:', escribir '2' (Media) y presionar Enter.", "data": "2", "expectedResults": "La prioridad 'Media' es seleccionada."},
+      {"stepDescription": "Cuando el sistema solicite 'Seleccione columna:', escribir '1' (Pendiente) y presionar Enter.", "data": "1", "expectedResults": "Se selecciona columna 'Pendiente'."},
+      {"stepDescription": "Cuando el sistema solicite 'Asignar a usuario (opcional, nombre o ID):', escribir 'Julian' y presionar Enter.", "data": "Julian", "expectedResults": "La asignación es aceptada (opcional)."},
+      {"stepDescription": "Esperar confirmación de creación.", "data": "N/A", "expectedResults": "Tarea 'Tarea CA1' agregada a 'Pendiente'."}
+    ]
+  },
+  {
+    "title": "HU-003 CA-2 - Validar título obligatorio no vacío",
+    "description": "Validar que el título de la tarea es obligatorio y no puede estar vacío.",
+    "preconditions": "Proyecto actual abierto con columnas disponibles.",
+    "priority": "Critical",
+    "status": "Ready",
+    "type": "Functional",
+    "owner": "Julian",
+    "steps": [
+      {"stepDescription": "En el menú del Proyecto, oprimir '2' (Agregar tarea).", "data": "2", "expectedResults": "Se muestra 'AGREGAR NUEVA TAREA'."},
+      {"stepDescription": "Cuando el sistema solicite 'Titulo de la tarea:', presionar Enter sin escribir.", "data": "<vacío>", "expectedResults": "El sistema muestra 'El titulo no puede estar vacio'."}
+    ]
+  },
+  {
+    "title": "HU-003 CA-3 - Descripción opcional",
+    "description": "Validar que la descripción es opcional al crear una tarea.",
+    "preconditions": "Proyecto actual abierto con columnas disponibles.",
+    "priority": "High",
+    "status": "Ready",
+    "type": "Functional",
+    "owner": "Julian",
+    "steps": [
+      {"stepDescription": "Abrir 'Agregar tarea'.", "data": "2", "expectedResults": "Se muestra 'AGREGAR NUEVA TAREA'."},
+      {"stepDescription": "Ingresar título 'Tarea CA3' y presionar Enter.", "data": "Tarea CA3", "expectedResults": "El título es aceptado."},
+      {"stepDescription": "Cuando el sistema solicite 'Descripcion (opcional):', presionar Enter sin escribir.", "data": "<vacío>", "expectedResults": "La descripción vacía es aceptada."},
+      {"stepDescription": "Seleccionar prioridad '1' (Baja).", "data": "1", "expectedResults": "La prioridad 'Baja' es seleccionada."},
+      {"stepDescription": "Seleccionar columna '1' (Pendiente).", "data": "1", "expectedResults": "Se selecciona columna 'Pendiente'."},
+      {"stepDescription": "No asignar usuario (presionar Enter).", "data": "<vacío>", "expectedResults": "La asignación vacía es aceptada."},
+      {"stepDescription": "Confirmación.", "data": "N/A", "expectedResults": "Tarea 'Tarea CA3' agregada a 'Pendiente'."}
+    ]
+  },
+  {
+    "title": "HU-003 CA-4 - Seleccionar prioridad Baja/Media/Alta/Urgente",
+    "description": "Validar que el usuario puede seleccionar la prioridad entre las opciones listadas.",
+    "preconditions": "Proyecto actual abierto con columnas disponibles.",
+    "priority": "High",
+    "status": "Ready",
+    "type": "Functional",
+    "owner": "Julian",
+    "steps": [
+      {"stepDescription": "Abrir 'Agregar tarea' y crear 'Tarea CA4' con prioridad '4' (Urgente).", "data": "Titulo=Tarea CA4; Prioridad=4; Columna=1; Asignado=<vacío>", "expectedResults": "Tarea 'Tarea CA4' agregada a 'Pendiente'."},
+      {"stepDescription": "Buscar la tarea y abrir edición para ver detalles.", "data": "buscar 'Tarea CA4'", "expectedResults": "Se muestra 'EDITAR TAREA: Tarea CA4'."},
+      {"stepDescription": "Seleccionar '8' (Ver detalles).", "data": "8", "expectedResults": "Se muestra 'Prioridad: Urgente'."}
+    ]
+  },
+  {
+    "title": "HU-003 CA-5 - Prioridad por defecto 'Media'",
+    "description": "Validar que si no se especifica la prioridad, se asigna 'Media' por defecto.",
+    "preconditions": "Proyecto actual abierto.",
+    "priority": "High",
+    "status": "Ready",
+    "type": "Functional",
+    "owner": "Julian",
+    "steps": [
+      {"stepDescription": "Abrir 'Agregar tarea'.", "data": "2", "expectedResults": "Se muestra 'AGREGAR NUEVA TAREA'."},
+      {"stepDescription": "Ingresar título 'Tarea CA5'.", "data": "Tarea CA5", "expectedResults": "Título aceptado."},
+      {"stepDescription": "En 'Seleccione prioridad:', presionar Enter sin escribir.", "data": "<vacío>", "expectedResults": "Se asigna prioridad por defecto 'Media'."},
+      {"stepDescription": "Elegir columna '1' (Pendiente).", "data": "1", "expectedResults": "Columna 'Pendiente' seleccionada."},
+      {"stepDescription": "Confirmación de creación.", "data": "N/A", "expectedResults": "Tarea 'Tarea CA5' agregada a 'Pendiente'."},
+      {"stepDescription": "Abrir edición y ver detalles (opción '8').", "data": "8", "expectedResults": "Se muestra 'Prioridad: Media'."}
+    ]
+  },
+  {
+    "title": "HU-003 CA-6 - Seleccionar columna destino",
+    "description": "Validar que el usuario debe seleccionar la columna destino al crear la tarea.",
+    "preconditions": "Proyecto actual abierto.",
+    "priority": "High",
+    "status": "Ready",
+    "type": "Functional",
+    "owner": "Julian",
+    "steps": [
+      {"stepDescription": "Crear 'Tarea CA6' seleccionando columna '2' (En Progreso).", "data": "Titulo=Tarea CA6; Prioridad=2; Columna=2", "expectedResults": "Tarea 'Tarea CA6' agregada a 'En Progreso'."}
+    ]
+  },
+  {
+    "title": "HU-003 CA-7 - Asignación opcional de usuario",
+    "description": "Validar que el usuario puede asignar la tarea a un usuario de forma opcional.",
+    "preconditions": "Proyecto actual abierto.",
+    "priority": "Medium",
+    "status": "Ready",
+    "type": "Functional",
+    "owner": "Julian",
+    "steps": [
+      {"stepDescription": "Crear 'Tarea CA7' asignando 'Jeferson'.", "data": "Titulo=Tarea CA7; Prioridad=3; Columna=1; Asignado=Jeferson", "expectedResults": "Tarea 'Tarea CA7' agregada a 'Pendiente'."},
+      {"stepDescription": "Ver detalles de la tarea.", "data": "8", "expectedResults": "Se muestra 'Asignado a: Jeferson'."}
+    ]
+  },
+  {
+    "title": "HU-003 CA-8 - ID único (UUID) por tarea",
+    "description": "Validar que cada tarea recibe un ID UUID único automáticamente.",
+    "preconditions": "Proyecto actual abierto.",
+    "priority": "Medium",
+    "status": "Ready",
+    "type": "Functional",
+    "owner": "Julian",
+    "steps": [
+      {"stepDescription": "Crear 'Tarea CA8' en 'Pendiente'.", "data": "Titulo=Tarea CA8; Prioridad=2; Columna=1", "expectedResults": "Tarea 'Tarea CA8' agregada a 'Pendiente'."},
+      {"stepDescription": "Abrir edición y ver detalles.", "data": "8", "expectedResults": "Se muestra 'ID: <uuid>' no vacío."}
+    ]
+  },
+  {
+    "title": "HU-003 CA-9 - Estado inicial 'Pendiente'",
+    "description": "Validar que el estado inicial de una tarea es 'Pendiente'.",
+    "preconditions": "Proyecto actual abierto.",
+    "priority": "High",
+    "status": "Ready",
+    "type": "Functional",
+    "owner": "Julian",
+    "steps": [
+      {"stepDescription": "Crear 'Tarea CA9'.", "data": "Titulo=Tarea CA9; Prioridad=2; Columna=1", "expectedResults": "Tarea 'Tarea CA9' agregada a 'Pendiente'."},
+      {"stepDescription": "Ver detalles.", "data": "8", "expectedResults": "Se muestra 'Estado: Pendiente'."}
+    ]
+  },
+  {
+    "title": "HU-003 CA-10 - Fechas de creación y modificación automáticas",
+    "description": "Validar que se registran automáticamente fechas de creación y modificación.",
+    "preconditions": "Proyecto actual abierto.",
+    "priority": "Medium",
+    "status": "Ready",
+    "type": "Functional",
+    "owner": "Julian",
+    "steps": [
+      {"stepDescription": "Crear 'Tarea CA10'.", "data": "Titulo=Tarea CA10; Columna=1", "expectedResults": "Tarea creada."},
+      {"stepDescription": "Ver detalles.", "data": "8", "expectedResults": "Se muestran 'Creada: <fecha>' y 'Modificada: <fecha>'."}
+    ]
+  },
+  {
+    "title": "HU-003 CA-11 - Guardado automático tras crear tarea",
+    "description": "Validar que el proyecto se guarda automáticamente después de crear la tarea.",
+    "preconditions": "Proyecto actual abierto.",
+    "priority": "High",
+    "status": "Ready",
+    "type": "Functional",
+    "owner": "Julian",
+    "steps": [
+      {"stepDescription": "Crear 'Tarea CA11'.", "data": "Titulo=Tarea CA11; Columna=1", "expectedResults": "Se muestra 'Tarea 'Tarea CA11' agregada a 'Pendiente'.'"}
+    ]
+  },
+  {
+    "title": "HU-003 CA-12 - Mensaje de confirmación al crear",
+    "description": "Validar que el sistema muestra mensaje de confirmación cuando la tarea se crea.",
+    "preconditions": "Proyecto actual abierto.",
+    "priority": "Medium",
+    "status": "Ready",
+    "type": "Functional",
+    "owner": "Julian",
+    "steps": [
+      {"stepDescription": "Crear 'Tarea CA12'.", "data": "Titulo=Tarea CA12; Columna=1", "expectedResults": "Se muestra 'Tarea 'Tarea CA12' agregada a '<columna>'.'"}
+    ]
+  },
+
+  {
+    "title": "HU-004 CA-1 - Cambiar título de la tarea",
+    "description": "Validar que el usuario puede cambiar el título de la tarea.",
+    "preconditions": "Existe una tarea 'Editar CA1' en 'Pendiente'.",
+    "priority": "Critical",
+    "status": "Ready",
+    "type": "Functional",
+    "owner": "Jeferson",
+    "steps": [
+      {"stepDescription": "Buscar 'Editar CA1' y seleccionar la tarea para editar.", "data": "buscar 'Editar CA1'", "expectedResults": "Se muestra 'EDITAR TAREA: Editar CA1'."},
+      {"stepDescription": "Seleccionar '1' (Cambiar titulo).", "data": "1", "expectedResults": "Se solicita 'Nuevo titulo:'."},
+      {"stepDescription": "Ingresar 'Editar CA1 Renombrada' y presionar Enter.", "data": "Editar CA1 Renombrada", "expectedResults": "El título se actualiza."},
+      {"stepDescription": "Seleccionar '0' (Guardar y volver).", "data": "0", "expectedResults": "Se muestra 'Cambios guardados'."}
+    ]
+  },
+  {
+    "title": "HU-004 CA-2 - Cambiar descripción",
+    "description": "Validar que el usuario puede cambiar la descripción de la tarea.",
+    "preconditions": "Existe una tarea 'Editar CA2' en 'Pendiente'.",
+    "priority": "High",
+    "status": "Ready",
+    "type": "Functional",
+    "owner": "Jeferson",
+    "steps": [
+      {"stepDescription": "Buscar 'Editar CA2' y abrir edición.", "data": "buscar 'Editar CA2'", "expectedResults": "Se muestra 'EDITAR TAREA: Editar CA2'."},
+      {"stepDescription": "Seleccionar '2' (Cambiar descripcion).", "data": "2", "expectedResults": "Se solicita 'Nueva descripcion:'."},
+      {"stepDescription": "Ingresar 'Descripción actualizada' y presionar Enter.", "data": "Descripción actualizada", "expectedResults": "La descripción se actualiza."},
+      {"stepDescription": "Guardar ('0').", "data": "0", "expectedResults": "Se muestra 'Cambios guardados'."}
+    ]
+  },
+  {
+    "title": "HU-004 CA-3 - Cambiar prioridad",
+    "description": "Validar que el usuario puede cambiar la prioridad de la tarea.",
+    "preconditions": "Existe una tarea 'Editar CA3' en 'Pendiente'.",
+    "priority": "High",
+    "status": "Ready",
+    "type": "Functional",
+    "owner": "Jeferson",
+    "steps": [
+      {"stepDescription": "Abrir edición y seleccionar '3' (Cambiar prioridad).", "data": "3", "expectedResults": "Se listan 'Prioridades:' con opciones 1-4."},
+      {"stepDescription": "Ingresar '4' (Urgente).", "data": "4", "expectedResults": "La prioridad se actualiza a 'Urgente'."},
+      {"stepDescription": "Guardar ('0').", "data": "0", "expectedResults": "Se muestra 'Cambios guardados'."}
+    ]
+  },
+  {
+    "title": "HU-004 CA-4 - Cambiar estado",
+    "description": "Validar que el usuario puede cambiar el estado entre Pendiente, En Progreso, Completada, Bloqueada.",
+    "preconditions": "Existe una tarea 'Editar CA4' en 'Pendiente'.",
+    "priority": "High",
+    "status": "Ready",
+    "type": "Functional",
+    "owner": "Jeferson",
+    "steps": [
+      {"stepDescription": "Abrir edición y seleccionar '4' (Cambiar estado).", "data": "4", "expectedResults": "Se listan 'Estados:' con opciones 1-4."},
+      {"stepDescription": "Ingresar '2' (En Progreso).", "data": "2", "expectedResults": "El estado se actualiza a 'En Progreso'."},
+      {"stepDescription": "Guardar ('0').", "data": "0", "expectedResults": "Se muestra 'Cambios guardados'."}
+    ]
+  },
+  {
+    "title": "HU-004 CA-5 - Cambiar usuario asignado",
+    "description": "Validar que el usuario puede cambiar la asignación de la tarea.",
+    "preconditions": "Existe una tarea 'Editar CA5' en 'Pendiente'.",
+    "priority": "Medium",
+    "status": "Ready",
+    "type": "Functional",
+    "owner": "Jeferson",
+    "steps": [
+      {"stepDescription": "Abrir edición y seleccionar '5' (Asignar a usuario).", "data": "5", "expectedResults": "Se solicita 'Asignar a (nombre o ID):'."},
+      {"stepDescription": "Ingresar 'Jeferson' y presionar Enter.", "data": "Jeferson", "expectedResults": "La asignación se actualiza."},
+      {"stepDescription": "Guardar ('0').", "data": "0", "expectedResults": "Se muestra 'Cambios guardados'."}
+    ]
+  },
+  {
+    "title": "HU-004 CA-6 - Mover tarea a otra columna",
+    "description": "Validar que el usuario puede mover la tarea a otra columna del proyecto.",
+    "preconditions": "Existe una tarea 'Editar CA6' en 'Pendiente'.",
+    "priority": "High",
+    "status": "Ready",
+    "type": "Functional",
+    "owner": "Jeferson",
+    "steps": [
+      {"stepDescription": "Abrir edición y seleccionar '6' (Mover a otra columna).", "data": "6", "expectedResults": "Se listan 'Columnas disponibles:'."},
+      {"stepDescription": "Ingresar '3' (Completada).", "data": "3", "expectedResults": "Se muestra 'Tarea movida'."},
+      {"stepDescription": "Guardar ('0').", "data": "0", "expectedResults": "Se muestra 'Cambios guardados'."}
+    ]
+  },
+  {
+    "title": "HU-004 CA-7 - Agregar etiquetas",
+    "description": "Validar que el usuario puede agregar nuevas etiquetas a la tarea.",
+    "preconditions": "Existe una tarea 'Editar CA7' en 'Pendiente'.",
+    "priority": "Medium",
+    "status": "Ready",
+    "type": "Functional",
+    "owner": "Jeferson",
+    "steps": [
+      {"stepDescription": "Abrir edición y seleccionar '7' (Agregar etiqueta).", "data": "7", "expectedResults": "Se solicita 'Etiqueta a agregar:'."},
+      {"stepDescription": "Ingresar 'backend' y presionar Enter.", "data": "backend", "expectedResults": "Se muestra 'Etiqueta agregada'."},
+      {"stepDescription": "Ver detalles ('8').", "data": "8", "expectedResults": "Se muestra 'Etiquetas: backend'."}
+    ]
+  },
+  {
+    "title": "HU-004 CA-8 - Eliminar etiquetas existentes",
+    "description": "Validar que el usuario puede eliminar etiquetas existentes de la tarea.",
+    "preconditions": "Existe una tarea 'Editar CA8' con etiqueta 'backend'.",
+    "priority": "Medium",
+    "status": "Blocked",
+    "type": "Functional",
+    "owner": "Jeferson",
+    "steps": [
+      {"stepDescription": "Intentar eliminar etiqueta (no hay opción en CLI actual).", "data": "N/A", "expectedResults": "Funcionalidad no disponible en menú de edición (requiere implementación)."}
+    ]
+  },
+  {
+    "title": "HU-004 CA-9 - Ver detalles completos de la tarea",
+    "description": "Validar que el usuario puede ver todos los detalles completos de la tarea.",
+    "preconditions": "Existe una tarea 'Editar CA9'.",
+    "priority": "Medium",
+    "status": "Ready",
+    "type": "Functional",
+    "owner": "Jeferson",
+    "steps": [
+      {"stepDescription": "Abrir edición y seleccionar '8' (Ver detalles).", "data": "8", "expectedResults": "Se muestran ID, Titulo, Descripcion, Prioridad, Estado, Asignado a, Etiquetas, Creada, Modificada."}
+    ]
+  },
+  {
+    "title": "HU-004 CA-10 - Eliminar tarea con confirmación",
+    "description": "Validar que el usuario puede eliminar la tarea con confirmación previa.",
+    "preconditions": "Existe una tarea 'Editar CA10'.",
+    "priority": "High",
+    "status": "Ready",
+    "type": "Functional",
+    "owner": "Jeferson",
+    "steps": [
+      {"stepDescription": "Abrir edición y seleccionar '9' (Eliminar tarea).", "data": "9", "expectedResults": "Se solicita 'Eliminar tarea '<titulo>'? (s/n):'."},
+      {"stepDescription": "Ingresar 's' y presionar Enter.", "data": "s", "expectedResults": "Se muestra 'Tarea eliminada'."}
+    ]
+  },
+  {
+    "title": "HU-004 CA-11 - Fecha de modificación automática tras cambiar",
+    "description": "Validar que se actualiza automáticamente la fecha de modificación después de cada cambio.",
+    "preconditions": "Existe una tarea 'Editar CA11'.",
+    "priority": "Medium",
+    "status": "Ready",
+    "type": "Functional",
+    "owner": "Jeferson",
+    "steps": [
+      {"stepDescription": "Cambiar descripción ('2') e ingresar 'Cambio de prueba'.", "data": "2; Cambio de prueba", "expectedResults": "Descripción actualizada."},
+      {"stepDescription": "Ver detalles ('8').", "data": "8", "expectedResults": "Se muestra 'Modificada: <fecha>' con valor actualizado."}
+    ]
+  },
+  {
+    "title": "HU-004 CA-12 - Guardado automático tras cada edición",
+    "description": "Validar que el proyecto se guarda automáticamente después de cada edición.",
+    "preconditions": "Existe una tarea 'Editar CA12'.",
+    "priority": "High",
+    "status": "Ready",
+    "type": "Functional",
+    "owner": "Jeferson",
+    "steps": [
+      {"stepDescription": "Realizar un cambio (prioridad '3' → 'Alta') y guardar ('0').", "data": "3; Alta; 0", "expectedResults": "Se muestra 'Cambios guardados'."}
+    ]
+  }
+]

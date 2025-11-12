@@ -1,0 +1,522 @@
+[
+  {
+    "sprint": "Sprint 4",
+    "hu": "HU-005",
+    "ca": "CA-1",
+    "caseTitle": "HU-005 CA-1: Ingresar un término de búsqueda",
+    "description": "Validar que el usuario puede ingresar un término de búsqueda",
+    "preconditions": "Usuario actual seleccionado, proyecto actual abierto, al menos una tarea en el proyecto",
+    "priority": "Alta",
+    "status": "Diseñado",
+    "type": "Funcional",
+    "steps": [
+      {
+        "stepDescription": "En el menú principal, oprimir '3' (Trabajar con Proyecto Actual)",
+        "data": "3",
+        "expectedResults": "Se muestra el menú de Trabajar con Proyecto Actual"
+      },
+      {
+        "stepDescription": "En el menú de Trabajar con Proyecto Actual, oprimir '3' (Buscar tarea)",
+        "data": "3",
+        "expectedResults": "El sistema solicita 'Ingrese el titulo o parte de el para buscar:'"
+      },
+      {
+        "stepDescription": "Cuando el sistema solicite el término de búsqueda, escribir 'test' y presionar Enter",
+        "data": "test",
+        "expectedResults": "El sistema procesa la búsqueda y muestra resultados"
+      }
+    ]
+  },
+  {
+    "sprint": "Sprint 4",
+    "hu": "HU-005",
+    "ca": "CA-2",
+    "caseTitle": "HU-005 CA-2: Buscar en títulos de tareas (búsqueda parcial)",
+    "description": "Validar que el sistema busca en títulos de tareas con búsqueda parcial",
+    "preconditions": "Usuario actual seleccionado, proyecto actual abierto, tarea con título 'Implementar funcionalidad'",
+    "priority": "Alta",
+    "status": "Diseñado",
+    "type": "Funcional",
+    "steps": [
+      {
+        "stepDescription": "En el menú principal, oprimir '3' (Trabajar con Proyecto Actual)",
+        "data": "3",
+        "expectedResults": "Se muestra el menú de Trabajar con Proyecto Actual"
+      },
+      {
+        "stepDescription": "En el menú de Trabajar con Proyecto Actual, oprimir '3' (Buscar tarea)",
+        "data": "3",
+        "expectedResults": "El sistema solicita 'Ingrese el titulo o parte de el para buscar:'"
+      },
+      {
+        "stepDescription": "Cuando el sistema solicite el término de búsqueda, escribir 'Implementar' y presionar Enter",
+        "data": "Implementar",
+        "expectedResults": "El sistema encuentra la tarea 'Implementar funcionalidad' aunque el término sea parcial"
+      }
+    ]
+  },
+  {
+    "sprint": "Sprint 4",
+    "hu": "HU-005",
+    "ca": "CA-3",
+    "caseTitle": "HU-005 CA-3: Buscar en descripciones de tareas (búsqueda parcial)",
+    "description": "Validar que el sistema busca en descripciones de tareas con búsqueda parcial",
+    "preconditions": "Usuario actual seleccionado, proyecto actual abierto, tarea con descripción 'Revisar código y documentación'",
+    "priority": "Alta",
+    "status": "Diseñado",
+    "type": "Funcional",
+    "steps": [
+      {
+        "stepDescription": "En el menú principal, oprimir '3' (Trabajar con Proyecto Actual)",
+        "data": "3",
+        "expectedResults": "Se muestra el menú de Trabajar con Proyecto Actual"
+      },
+      {
+        "stepDescription": "En el menú de Trabajar con Proyecto Actual, oprimir '3' (Buscar tarea)",
+        "data": "3",
+        "expectedResults": "El sistema solicita 'Ingrese el titulo o parte de el para buscar:'"
+      },
+      {
+        "stepDescription": "Cuando el sistema solicite el término de búsqueda, escribir 'documentación' y presionar Enter",
+        "data": "documentación",
+        "expectedResults": "El sistema encuentra la tarea que contiene 'documentación' en su descripción"
+      }
+    ]
+  },
+  {
+    "sprint": "Sprint 4",
+    "hu": "HU-005",
+    "ca": "CA-4",
+    "caseTitle": "HU-005 CA-4: Validar búsqueda insensible a mayúsculas y minúsculas",
+    "description": "Validar que la búsqueda es insensible a mayúsculas y minúsculas",
+    "preconditions": "Usuario actual seleccionado, proyecto actual abierto, tarea con título 'Tarea Importante'",
+    "priority": "Alta",
+    "status": "Diseñado",
+    "type": "Funcional",
+    "steps": [
+      {
+        "stepDescription": "En el menú principal, oprimir '3' (Trabajar con Proyecto Actual)",
+        "data": "3",
+        "expectedResults": "Se muestra el menú de Trabajar con Proyecto Actual"
+      },
+      {
+        "stepDescription": "En el menú de Trabajar con Proyecto Actual, oprimir '3' (Buscar tarea)",
+        "data": "3",
+        "expectedResults": "El sistema solicita 'Ingrese el titulo o parte de el para buscar:'"
+      },
+      {
+        "stepDescription": "Cuando el sistema solicite el término de búsqueda, escribir 'IMPORTANTE' (mayúsculas) y presionar Enter",
+        "data": "IMPORTANTE",
+        "expectedResults": "El sistema encuentra la tarea 'Tarea Importante' aunque el término esté en mayúsculas"
+      }
+    ]
+  },
+  {
+    "sprint": "Sprint 4",
+    "hu": "HU-005",
+    "ca": "CA-5",
+    "caseTitle": "HU-005 CA-5: Mostrar el número total de tareas encontradas",
+    "description": "Validar que el sistema muestra el número total de tareas encontradas",
+    "preconditions": "Usuario actual seleccionado, proyecto actual abierto, múltiples tareas en el proyecto",
+    "priority": "Alta",
+    "status": "Diseñado",
+    "type": "Funcional",
+    "steps": [
+      {
+        "stepDescription": "En el menú principal, oprimir '3' (Trabajar con Proyecto Actual)",
+        "data": "3",
+        "expectedResults": "Se muestra el menú de Trabajar con Proyecto Actual"
+      },
+      {
+        "stepDescription": "En el menú de Trabajar con Proyecto Actual, oprimir '3' (Buscar tarea)",
+        "data": "3",
+        "expectedResults": "El sistema solicita 'Ingrese el titulo o parte de el para buscar:'"
+      },
+      {
+        "stepDescription": "Cuando el sistema solicite el término de búsqueda, escribir un término que coincida con varias tareas y presionar Enter",
+        "data": "(N/A)",
+        "expectedResults": "El sistema muestra 'RESULTADOS DE BUSQUEDA: [número] tareas encontradas'"
+      }
+    ]
+  },
+  {
+    "sprint": "Sprint 4",
+    "hu": "HU-005",
+    "ca": "CA-6",
+    "caseTitle": "HU-005 CA-6: Mostrar en qué columna está cada tarea encontrada",
+    "description": "Validar que el sistema muestra en qué columna está cada tarea encontrada",
+    "preconditions": "Usuario actual seleccionado, proyecto actual abierto, tareas en diferentes columnas",
+    "priority": "Alta",
+    "status": "Diseñado",
+    "type": "Funcional",
+    "steps": [
+      {
+        "stepDescription": "En el menú principal, oprimir '3' (Trabajar con Proyecto Actual)",
+        "data": "3",
+        "expectedResults": "Se muestra el menú de Trabajar con Proyecto Actual"
+      },
+      {
+        "stepDescription": "En el menú de Trabajar con Proyecto Actual, oprimir '3' (Buscar tarea)",
+        "data": "3",
+        "expectedResults": "El sistema solicita 'Ingrese el titulo o parte de el para buscar:'"
+      },
+      {
+        "stepDescription": "Cuando el sistema solicite el término de búsqueda, escribir un término y presionar Enter",
+        "data": "(N/A)",
+        "expectedResults": "El sistema muestra cada tarea encontrada con el formato '[número]. [título] (en '[nombre columna]')'"
+      }
+    ]
+  },
+  {
+    "sprint": "Sprint 4",
+    "hu": "HU-005",
+    "ca": "CA-7",
+    "caseTitle": "HU-005 CA-7: Seleccionar una tarea de los resultados para editar",
+    "description": "Validar que el usuario puede seleccionar una tarea de los resultados para editar",
+    "preconditions": "Usuario actual seleccionado, proyecto actual abierto, al menos una tarea encontrada en la búsqueda",
+    "priority": "Alta",
+    "status": "Diseñado",
+    "type": "Funcional",
+    "steps": [
+      {
+        "stepDescription": "En el menú principal, oprimir '3' (Trabajar con Proyecto Actual)",
+        "data": "3",
+        "expectedResults": "Se muestra el menú de Trabajar con Proyecto Actual"
+      },
+      {
+        "stepDescription": "En el menú de Trabajar con Proyecto Actual, oprimir '3' (Buscar tarea)",
+        "data": "3",
+        "expectedResults": "El sistema solicita 'Ingrese el titulo o parte de el para buscar:'"
+      },
+      {
+        "stepDescription": "Cuando el sistema solicite el término de búsqueda, escribir un término y presionar Enter",
+        "data": "(N/A)",
+        "expectedResults": "El sistema muestra los resultados de búsqueda"
+      },
+      {
+        "stepDescription": "Cuando el sistema solicite 'Seleccione tarea para editar (0 para cancelar):', escribir '1' y presionar Enter",
+        "data": "1",
+        "expectedResults": "El sistema muestra el menú de edición de tarea"
+      }
+    ]
+  },
+  {
+    "sprint": "Sprint 4",
+    "hu": "HU-005",
+    "ca": "CA-8",
+    "caseTitle": "HU-005 CA-8: Mostrar mensaje claro si no hay resultados de búsqueda",
+    "description": "Validar que se muestra un mensaje claro si no hay resultados de búsqueda",
+    "preconditions": "Usuario actual seleccionado, proyecto actual abierto",
+    "priority": "Alta",
+    "status": "Diseñado",
+    "type": "Validación",
+    "steps": [
+      {
+        "stepDescription": "En el menú principal, oprimir '3' (Trabajar con Proyecto Actual)",
+        "data": "3",
+        "expectedResults": "Se muestra el menú de Trabajar con Proyecto Actual"
+      },
+      {
+        "stepDescription": "En el menú de Trabajar con Proyecto Actual, oprimir '3' (Buscar tarea)",
+        "data": "3",
+        "expectedResults": "El sistema solicita 'Ingrese el titulo o parte de el para buscar:'"
+      },
+      {
+        "stepDescription": "Cuando el sistema solicite el término de búsqueda, escribir 'xyz123abc' (término que no existe) y presionar Enter",
+        "data": "xyz123abc",
+        "expectedResults": "El sistema muestra 'No se encontraron tareas'"
+      }
+    ]
+  },
+  {
+    "sprint": "Sprint 4",
+    "hu": "HU-005",
+    "ca": "CA-9",
+    "caseTitle": "HU-005 CA-9: Validar que el término de búsqueda vacío muestra error",
+    "description": "Validar que el término de búsqueda no puede estar vacío (según implementación actual)",
+    "preconditions": "Usuario actual seleccionado, proyecto actual abierto",
+    "priority": "Alta",
+    "status": "Diseñado",
+    "type": "Validación",
+    "steps": [
+      {
+        "stepDescription": "En el menú principal, oprimir '3' (Trabajar con Proyecto Actual)",
+        "data": "3",
+        "expectedResults": "Se muestra el menú de Trabajar con Proyecto Actual"
+      },
+      {
+        "stepDescription": "En el menú de Trabajar con Proyecto Actual, oprimir '3' (Buscar tarea)",
+        "data": "3",
+        "expectedResults": "El sistema solicita 'Ingrese el titulo o parte de el para buscar:'"
+      },
+      {
+        "stepDescription": "Cuando el sistema solicite el término de búsqueda, presionar Enter sin escribir nada",
+        "data": "",
+        "expectedResults": "El sistema muestra 'El termino de busqueda no puede estar vacio'"
+      }
+    ]
+  },
+  {
+    "sprint": "Sprint 4",
+    "hu": "HU-005",
+    "ca": "CA-10",
+    "caseTitle": "HU-005 CA-10: Validar eficiencia de búsqueda con muchas tareas",
+    "description": "Validar que la búsqueda es eficiente incluso con muchas tareas en el proyecto",
+    "preconditions": "Usuario actual seleccionado, proyecto actual abierto, proyecto con muchas tareas (más de 50)",
+    "priority": "Alta",
+    "status": "Diseñado",
+    "type": "Rendimiento",
+    "steps": [
+      {
+        "stepDescription": "En el menú principal, oprimir '3' (Trabajar con Proyecto Actual)",
+        "data": "3",
+        "expectedResults": "Se muestra el menú de Trabajar con Proyecto Actual"
+      },
+      {
+        "stepDescription": "En el menú de Trabajar con Proyecto Actual, oprimir '3' (Buscar tarea)",
+        "data": "3",
+        "expectedResults": "El sistema solicita 'Ingrese el titulo o parte de el para buscar:'"
+      },
+      {
+        "stepDescription": "Cuando el sistema solicite el término de búsqueda, escribir un término y presionar Enter",
+        "data": "(N/A)",
+        "expectedResults": "El sistema muestra los resultados en un tiempo razonable (menos de 2 segundos)"
+      }
+    ]
+  },
+  {
+    "sprint": "Sprint 4",
+    "hu": "HU-006",
+    "ca": "CA-1",
+    "caseTitle": "HU-006 CA-1: Mostrar todas las columnas del proyecto actual",
+    "description": "Validar que se muestran todas las columnas del proyecto actual",
+    "preconditions": "Usuario actual seleccionado, proyecto actual abierto, proyecto con múltiples columnas",
+    "priority": "Crítica",
+    "status": "Diseñado",
+    "type": "Funcional",
+    "steps": [
+      {
+        "stepDescription": "En el menú principal, oprimir '3' (Trabajar con Proyecto Actual)",
+        "data": "3",
+        "expectedResults": "Se muestra el menú de Trabajar con Proyecto Actual"
+      },
+      {
+        "stepDescription": "En el menú de Trabajar con Proyecto Actual, oprimir '1' (Ver tablero)",
+        "data": "1",
+        "expectedResults": "El sistema muestra todas las columnas del proyecto con formato '+- [nombre] ([X] tareas)'"
+      }
+    ]
+  },
+  {
+    "sprint": "Sprint 4",
+    "hu": "HU-006",
+    "ca": "CA-2",
+    "caseTitle": "HU-006 CA-2: Mostrar todas las tareas dentro de cada columna",
+    "description": "Validar que se muestran todas las tareas dentro de cada columna",
+    "preconditions": "Usuario actual seleccionado, proyecto actual abierto, columnas con tareas",
+    "priority": "Crítica",
+    "status": "Diseñado",
+    "type": "Funcional",
+    "steps": [
+      {
+        "stepDescription": "En el menú principal, oprimir '3' (Trabajar con Proyecto Actual)",
+        "data": "3",
+        "expectedResults": "Se muestra el menú de Trabajar con Proyecto Actual"
+      },
+      {
+        "stepDescription": "En el menú de Trabajar con Proyecto Actual, oprimir '1' (Ver tablero)",
+        "data": "1",
+        "expectedResults": "El sistema muestra todas las tareas de cada columna con formato '| [icono] [título]'"
+      }
+    ]
+  },
+  {
+    "sprint": "Sprint 4",
+    "hu": "HU-006",
+    "ca": "CA-3",
+    "caseTitle": "HU-006 CA-3: Mostrar el título de cada tarea en el tablero",
+    "description": "Validar que se muestra el título de cada tarea en el tablero",
+    "preconditions": "Usuario actual seleccionado, proyecto actual abierto, tareas con títulos",
+    "priority": "Crítica",
+    "status": "Diseñado",
+    "type": "Funcional",
+    "steps": [
+      {
+        "stepDescription": "En el menú principal, oprimir '3' (Trabajar con Proyecto Actual)",
+        "data": "3",
+        "expectedResults": "Se muestra el menú de Trabajar con Proyecto Actual"
+      },
+      {
+        "stepDescription": "En el menú de Trabajar con Proyecto Actual, oprimir '1' (Ver tablero)",
+        "data": "1",
+        "expectedResults": "El sistema muestra cada tarea con su título completo en formato '| [icono] [título]'"
+      }
+    ]
+  },
+  {
+    "sprint": "Sprint 4",
+    "hu": "HU-006",
+    "ca": "CA-4",
+    "caseTitle": "HU-006 CA-4: Mostrar el ID de la tarea (primeros 8 caracteres del UUID)",
+    "description": "Validar que se muestra el ID de la tarea (primeros 8 caracteres del UUID)",
+    "preconditions": "Usuario actual seleccionado, proyecto actual abierto, tareas en el proyecto",
+    "priority": "Crítica",
+    "status": "Diseñado",
+    "type": "Funcional",
+    "steps": [
+      {
+        "stepDescription": "En el menú principal, oprimir '3' (Trabajar con Proyecto Actual)",
+        "data": "3",
+        "expectedResults": "Se muestra el menú de Trabajar con Proyecto Actual"
+      },
+      {
+        "stepDescription": "En el menú de Trabajar con Proyecto Actual, oprimir '1' (Ver tablero)",
+        "data": "1",
+        "expectedResults": "El sistema muestra cada tarea con formato '|    ID: [primeros 8 caracteres]... | Asignado: [usuario]'"
+      }
+    ]
+  },
+  {
+    "sprint": "Sprint 4",
+    "hu": "HU-006",
+    "ca": "CA-5",
+    "caseTitle": "HU-006 CA-5: Mostrar el usuario asignado o 'Sin asignar'",
+    "description": "Validar que se muestra el usuario asignado o 'Sin asignar'",
+    "preconditions": "Usuario actual seleccionado, proyecto actual abierto, tareas con y sin asignación",
+    "priority": "Crítica",
+    "status": "Diseñado",
+    "type": "Funcional",
+    "steps": [
+      {
+        "stepDescription": "En el menú principal, oprimir '3' (Trabajar con Proyecto Actual)",
+        "data": "3",
+        "expectedResults": "Se muestra el menú de Trabajar con Proyecto Actual"
+      },
+      {
+        "stepDescription": "En el menú de Trabajar con Proyecto Actual, oprimir '1' (Ver tablero)",
+        "data": "1",
+        "expectedResults": "El sistema muestra 'Asignado: [nombre usuario]' para tareas asignadas o 'Asignado: Sin asignar' para tareas sin asignar"
+      }
+    ]
+  },
+  {
+    "sprint": "Sprint 4",
+    "hu": "HU-006",
+    "ca": "CA-6",
+    "caseTitle": "HU-006 CA-6: Mostrar icono de prioridad",
+    "description": "Validar que se muestra icono de prioridad: !! Urgente, [A] Alta, [M] Media, [B] Baja",
+    "preconditions": "Usuario actual seleccionado, proyecto actual abierto, tareas con diferentes prioridades",
+    "priority": "Crítica",
+    "status": "Diseñado",
+    "type": "Funcional",
+    "steps": [
+      {
+        "stepDescription": "En el menú principal, oprimir '3' (Trabajar con Proyecto Actual)",
+        "data": "3",
+        "expectedResults": "Se muestra el menú de Trabajar con Proyecto Actual"
+      },
+      {
+        "stepDescription": "En el menú de Trabajar con Proyecto Actual, oprimir '1' (Ver tablero)",
+        "data": "1",
+        "expectedResults": "El sistema muestra iconos de prioridad: '!!' para Urgente, '[A]' para Alta, '[M]' para Media, '[B]' para Baja"
+      }
+    ]
+  },
+  {
+    "sprint": "Sprint 4",
+    "hu": "HU-006",
+    "ca": "CA-7",
+    "caseTitle": "HU-006 CA-7: Mostrar el conteo total de tareas en cada columna",
+    "description": "Validar que se muestra el conteo total de tareas en cada columna",
+    "preconditions": "Usuario actual seleccionado, proyecto actual abierto, columnas con diferentes cantidades de tareas",
+    "priority": "Crítica",
+    "status": "Diseñado",
+    "type": "Funcional",
+    "steps": [
+      {
+        "stepDescription": "En el menú principal, oprimir '3' (Trabajar con Proyecto Actual)",
+        "data": "3",
+        "expectedResults": "Se muestra el menú de Trabajar con Proyecto Actual"
+      },
+      {
+        "stepDescription": "En el menú de Trabajar con Proyecto Actual, oprimir '1' (Ver tablero)",
+        "data": "1",
+        "expectedResults": "El sistema muestra cada columna con formato '+- [nombre] ([X] tareas)' donde X es el número de tareas"
+      }
+    ]
+  },
+  {
+    "sprint": "Sprint 4",
+    "hu": "HU-006",
+    "ca": "CA-8",
+    "caseTitle": "HU-006 CA-8: Mostrar mensaje '(vacio)' en columnas sin tareas",
+    "description": "Validar que se muestra un mensaje '(vacio)' en columnas sin tareas",
+    "preconditions": "Usuario actual seleccionado, proyecto actual abierto, al menos una columna sin tareas",
+    "priority": "Crítica",
+    "status": "Diseñado",
+    "type": "Funcional",
+    "steps": [
+      {
+        "stepDescription": "En el menú principal, oprimir '3' (Trabajar con Proyecto Actual)",
+        "data": "3",
+        "expectedResults": "Se muestra el menú de Trabajar con Proyecto Actual"
+      },
+      {
+        "stepDescription": "En el menú de Trabajar con Proyecto Actual, oprimir '1' (Ver tablero)",
+        "data": "1",
+        "expectedResults": "El sistema muestra '| (vacio)' en las columnas que no tienen tareas"
+      }
+    ]
+  },
+  {
+    "sprint": "Sprint 4",
+    "hu": "HU-006",
+    "ca": "CA-9",
+    "caseTitle": "HU-006 CA-9: Validar layout legible y bien organizado",
+    "description": "Validar que el layout es legible, bien organizado y visualmente claro",
+    "preconditions": "Usuario actual seleccionado, proyecto actual abierto, múltiples columnas y tareas",
+    "priority": "Crítica",
+    "status": "Diseñado",
+    "type": "Usabilidad",
+    "steps": [
+      {
+        "stepDescription": "En el menú principal, oprimir '3' (Trabajar con Proyecto Actual)",
+        "data": "3",
+        "expectedResults": "Se muestra el menú de Trabajar con Proyecto Actual"
+      },
+      {
+        "stepDescription": "En el menú de Trabajar con Proyecto Actual, oprimir '1' (Ver tablero)",
+        "data": "1",
+        "expectedResults": "El sistema muestra el tablero con formato claro: columnas separadas, tareas listadas, información organizada y fácil de leer"
+      }
+    ]
+  },
+  {
+    "sprint": "Sprint 4",
+    "hu": "HU-006",
+    "ca": "CA-10",
+    "caseTitle": "HU-006 CA-10: Volver al menú anterior desde la vista del tablero",
+    "description": "Validar que el usuario puede volver al menú anterior desde la vista del tablero",
+    "preconditions": "Usuario actual seleccionado, proyecto actual abierto",
+    "priority": "Crítica",
+    "status": "Diseñado",
+    "type": "Funcional",
+    "steps": [
+      {
+        "stepDescription": "En el menú principal, oprimir '3' (Trabajar con Proyecto Actual)",
+        "data": "3",
+        "expectedResults": "Se muestra el menú de Trabajar con Proyecto Actual"
+      },
+      {
+        "stepDescription": "En el menú de Trabajar con Proyecto Actual, oprimir '1' (Ver tablero)",
+        "data": "1",
+        "expectedResults": "El sistema muestra el tablero"
+      },
+      {
+        "stepDescription": "Cuando el sistema solicite 'Presione Enter para continuar...', presionar Enter",
+        "data": "(N/A)",
+        "expectedResults": "El sistema regresa al menú de Trabajar con Proyecto Actual"
+      }
+    ]
+  }
+]

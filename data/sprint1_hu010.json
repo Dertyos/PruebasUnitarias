@@ -1,0 +1,186 @@
+{
+  "proyectos": [
+    {
+      "proyecto_id": "d9d2ffc7-72c9-4d4b-9e48-43073b7d068e",
+      "nombre": "Proyecto Auto",
+      "descripcion": "CA-2",
+      "propietario_id": "010aab99-468d-46d0-b2a1-42cd6a1e25ee",
+      "columnas": [
+        {
+          "columna_id": "1016c0cf-abcf-49ed-ae1b-deb4bd92c73c",
+          "nombre": "Pendiente",
+          "orden": 0,
+          "tareas": [],
+          "fecha_creacion": "2025-11-12T14:31:09.573591"
+        },
+        {
+          "columna_id": "02d90e5a-22f7-4364-9121-94900121325e",
+          "nombre": "En Progreso",
+          "orden": 1,
+          "tareas": [],
+          "fecha_creacion": "2025-11-12T14:31:09.573600"
+        },
+        {
+          "columna_id": "b3149c26-5206-428a-86c8-0b56398ebd66",
+          "nombre": "Completada",
+          "orden": 2,
+          "tareas": [],
+          "fecha_creacion": "2025-11-12T14:31:09.573606"
+        }
+      ],
+      "miembros": [],
+      "fecha_creacion": "2025-11-12T14:31:09.573581",
+      "fecha_modificacion": "2025-11-12T14:31:09.573608"
+    },
+    {
+      "proyecto_id": "6e65e7e4-6c22-4ee0-8161-e0c5c5f411e6",
+      "nombre": "Eliminar",
+      "descripcion": "Test",
+      "propietario_id": null,
+      "columnas": [],
+      "miembros": [],
+      "fecha_creacion": "2025-11-12T14:31:09.576210",
+      "fecha_modificacion": "2025-11-12T14:31:09.576214"
+    },
+    {
+      "proyecto_id": "6c972d30-9bc2-40ec-afe2-2ef1203eda25",
+      "nombre": "Proyecto Auto",
+      "descripcion": "CA-2",
+      "propietario_id": "56a7d018-169b-4043-b069-1e92f5ebd9c7",
+      "columnas": [
+        {
+          "columna_id": "f06dba88-880c-4222-b317-f514b26d0ca0",
+          "nombre": "Pendiente",
+          "orden": 0,
+          "tareas": [],
+          "fecha_creacion": "2025-11-12T14:31:52.736653"
+        },
+        {
+          "columna_id": "2731d48f-e11b-4763-91a8-2b3cf5334228",
+          "nombre": "En Progreso",
+          "orden": 1,
+          "tareas": [],
+          "fecha_creacion": "2025-11-12T14:31:52.736661"
+        },
+        {
+          "columna_id": "c92b9328-8324-409b-9569-4e62fd71dcc9",
+          "nombre": "Completada",
+          "orden": 2,
+          "tareas": [],
+          "fecha_creacion": "2025-11-12T14:31:52.736668"
+        }
+      ],
+      "miembros": [],
+      "fecha_creacion": "2025-11-12T14:31:52.736644",
+      "fecha_modificacion": "2025-11-12T14:31:52.736669"
+    },
+    {
+      "proyecto_id": "62693448-e798-4600-9bb7-160eca826572",
+      "nombre": "Eliminar",
+      "descripcion": "Test",
+      "propietario_id": null,
+      "columnas": [],
+      "miembros": [],
+      "fecha_creacion": "2025-11-12T14:31:52.739725",
+      "fecha_modificacion": "2025-11-12T14:31:52.739730"
+    },
+    {
+      "proyecto_id": "b6e67bd8-8da1-4dfc-bb9e-95273db353c7",
+      "nombre": "Proyecto Auto",
+      "descripcion": "CA-2",
+      "propietario_id": "78957b67-35a0-407f-874c-4b300c89cf08",
+      "columnas": [
+        {
+          "columna_id": "b5c18315-35b0-4541-9f27-3a67eed322c3",
+          "nombre": "Pendiente",
+          "orden": 0,
+          "tareas": [],
+          "fecha_creacion": "2025-11-12T14:31:59.518714"
+        },
+        {
+          "columna_id": "244ebf9f-3b5a-423c-a2f5-06982eed5e2c",
+          "nombre": "En Progreso",
+          "orden": 1,
+          "tareas": [],
+          "fecha_creacion": "2025-11-12T14:31:59.518723"
+        },
+        {
+          "columna_id": "535c1ab1-f0ad-4b9d-8031-4462cc8907ec",
+          "nombre": "Completada",
+          "orden": 2,
+          "tareas": [],
+          "fecha_creacion": "2025-11-12T14:31:59.518730"
+        }
+      ],
+      "miembros": [],
+      "fecha_creacion": "2025-11-12T14:31:59.518705",
+      "fecha_modificacion": "2025-11-12T14:31:59.518731"
+    },
+    {
+      "proyecto_id": "2fa65655-4705-4cdd-b725-cc9bd8e3971e",
+      "nombre": "Eliminar",
+      "descripcion": "Test",
+      "propietario_id": null,
+      "columnas": [],
+      "miembros": [],
+      "fecha_creacion": "2025-11-12T14:31:59.522415",
+      "fecha_modificacion": "2025-11-12T14:31:59.522419"
+    }
+  ],
+  "usuarios": [
+    {
+      "usuario_id": "5bcd1c7e-b68c-4e37-9fde-55d76a771364",
+      "nombre": "Persistente",
+      "email": "persistente@dominio.com",
+      "fecha_creacion": "2025-11-12T14:31:09.572981"
+    },
+    {
+      "usuario_id": "010aab99-468d-46d0-b2a1-42cd6a1e25ee",
+      "nombre": "Owner",
+      "email": "owner@dominio.com",
+      "fecha_creacion": "2025-11-12T14:31:09.573453"
+    },
+    {
+      "usuario_id": "c64cd318-90b9-4c15-8dc1-4a22b7afc808",
+      "nombre": "B",
+      "email": "b@dominio.com",
+      "fecha_creacion": "2025-11-12T14:31:09.575367"
+    },
+    {
+      "usuario_id": "842d891c-0152-4343-9b74-d236931b6e4f",
+      "nombre": "Persistente",
+      "email": "persistente@dominio.com",
+      "fecha_creacion": "2025-11-12T14:31:52.735911"
+    },
+    {
+      "usuario_id": "56a7d018-169b-4043-b069-1e92f5ebd9c7",
+      "nombre": "Owner",
+      "email": "owner@dominio.com",
+      "fecha_creacion": "2025-11-12T14:31:52.736474"
+    },
+    {
+      "usuario_id": "f4fe5464-dd32-40fa-a715-0e116b1d8b70",
+      "nombre": "B",
+      "email": "b@dominio.com",
+      "fecha_creacion": "2025-11-12T14:31:52.738618"
+    },
+    {
+      "usuario_id": "1978bbd5-5dc6-4578-91f9-0d2bb6b8cc5c",
+      "nombre": "Persistente",
+      "email": "persistente@dominio.com",
+      "fecha_creacion": "2025-11-12T14:31:59.517901"
+    },
+    {
+      "usuario_id": "78957b67-35a0-407f-874c-4b300c89cf08",
+      "nombre": "Owner",
+      "email": "owner@dominio.com",
+      "fecha_creacion": "2025-11-12T14:31:59.518486"
+    },
+    {
+      "usuario_id": "fe164b87-d076-4305-a619-81a384eeea98",
+      "nombre": "B",
+      "email": "b@dominio.com",
+      "fecha_creacion": "2025-11-12T14:31:59.521048"
+    }
+  ]
+}

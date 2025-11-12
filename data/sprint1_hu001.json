@@ -1,0 +1,113 @@
+{
+  "proyectos": [],
+  "usuarios": [
+    {
+      "usuario_id": "dbedbe5b-babf-4f90-a30c-42023c363d79",
+      "nombre": "Usuario Valido",
+      "email": "valido@dominio.com",
+      "fecha_creacion": "2025-11-12T14:31:09.563784"
+    },
+    {
+      "usuario_id": "22ad4ee9-c7bc-445f-926b-0a9799bbc8a2",
+      "nombre": "Usuario Falla",
+      "email": "emailinvalido.com",
+      "fecha_creacion": "2025-11-12T14:31:09.564504"
+    },
+    {
+      "usuario_id": "8519c419-1a9c-4640-ac02-bb5f395d460e",
+      "nombre": "U1",
+      "email": "u1@dominio.com",
+      "fecha_creacion": "2025-11-12T14:31:09.571614"
+    },
+    {
+      "usuario_id": "99ee78e3-a6b4-4516-8f4a-699553e60464",
+      "nombre": "U2",
+      "email": "u2@dominio.com",
+      "fecha_creacion": "2025-11-12T14:31:09.571829"
+    },
+    {
+      "usuario_id": "0a02a1a4-02ef-4367-8480-8e342daa41c3",
+      "nombre": "U1",
+      "email": "u1@dominio.com",
+      "fecha_creacion": "2025-11-12T14:31:09.572349"
+    },
+    {
+      "usuario_id": "2befe33d-700e-4fc4-a22d-9f3db855501e",
+      "nombre": "U2",
+      "email": "u2@dominio.com",
+      "fecha_creacion": "2025-11-12T14:31:09.572356"
+    },
+    {
+      "usuario_id": "ec4632ca-d982-4d2f-9f8c-33d023fd5a59",
+      "nombre": "Usuario Valido",
+      "email": "valido@dominio.com",
+      "fecha_creacion": "2025-11-12T14:31:52.725979"
+    },
+    {
+      "usuario_id": "fa2c33f3-79fe-42b7-832b-5386b5d39b1a",
+      "nombre": "Usuario Falla",
+      "email": "emailinvalido.com",
+      "fecha_creacion": "2025-11-12T14:31:52.726895"
+    },
+    {
+      "usuario_id": "d08a56a4-9cb8-4081-83a1-4cbc737d5599",
+      "nombre": "U1",
+      "email": "u1@dominio.com",
+      "fecha_creacion": "2025-11-12T14:31:52.734403"
+    },
+    {
+      "usuario_id": "f94457df-76c4-450e-9475-a0d18b0697ce",
+      "nombre": "U2",
+      "email": "u2@dominio.com",
+      "fecha_creacion": "2025-11-12T14:31:52.734664"
+    },
+    {
+      "usuario_id": "1e90b2da-ca3b-4506-90f1-71381003a8f5",
+      "nombre": "U1",
+      "email": "u1@dominio.com",
+      "fecha_creacion": "2025-11-12T14:31:52.735239"
+    },
+    {
+      "usuario_id": "f290b08d-2f59-4905-8ce9-e979e69beba1",
+      "nombre": "U2",
+      "email": "u2@dominio.com",
+      "fecha_creacion": "2025-11-12T14:31:52.735245"
+    },
+    {
+      "usuario_id": "a2d462ca-bfbf-4b2a-8945-a0be539787bf",
+      "nombre": "Usuario Valido",
+      "email": "valido@dominio.com",
+      "fecha_creacion": "2025-11-12T14:31:59.508310"
+    },
+    {
+      "usuario_id": "bb3a2249-87bb-4a9d-91d8-06bcb955c87a",
+      "nombre": "Usuario Falla",
+      "email": "emailinvalido.com",
+      "fecha_creacion": "2025-11-12T14:31:59.509113"
+    },
+    {
+      "usuario_id": "ccc3b1dd-b760-426e-83aa-09758963cd1d",
+      "nombre": "U1",
+      "email": "u1@dominio.com",
+      "fecha_creacion": "2025-11-12T14:31:59.516413"
+    },
+    {
+      "usuario_id": "3772c0a7-a4b4-4ed6-a3d4-4f10ce45b35d",
+      "nombre": "U2",
+      "email": "u2@dominio.com",
+      "fecha_creacion": "2025-11-12T14:31:59.516613"
+    },
+    {
+      "usuario_id": "2e5598d7-1579-43e4-9d8b-771c4a3902b0",
+      "nombre": "U1",
+      "email": "u1@dominio.com",
+      "fecha_creacion": "2025-11-12T14:31:59.517207"
+    },
+    {
+      "usuario_id": "1df35672-c6bf-428c-a4dc-6d074dabad65",
+      "nombre": "U2",
+      "email": "u2@dominio.com",
+      "fecha_creacion": "2025-11-12T14:31:59.517212"
+    }
+  ]
+}

@@ -1,0 +1,273 @@
+[
+  {
+    "title": "HU-001 CA-1 - Crear usuario con nombre y email válido",
+    "description": "Validar que el usuario puede crear un nuevo usuario ingresando nombre y email válidos.",
+    "preconditions": "Aplicación iniciada en menú principal; sin usuarios previos.",
+    "priority": "Crítica",
+    "status": "Listo",
+    "type": "Funcional",
+    "steps": [
+      {"stepId": 1, "stepDescription": "En el menú principal, oprimir '1' (Gestionar Usuarios).", "data": "(N/A)", "expectedResults": "Se muestra el submenú de Usuarios."},
+      {"stepId": 2, "stepDescription": "Oprimir '1' (Crear nuevo usuario).", "data": "(N/A)", "expectedResults": "El sistema solicita 'Nombre del usuario:'."},
+      {"stepId": 3, "stepDescription": "Ingresar nombre válido y presionar Enter.", "data": "Nombre del usuario: 'Usuario Valido'", "expectedResults": "El sistema solicita 'Email del usuario:'."},
+      {"stepId": 4, "stepDescription": "Ingresar email válido y presionar Enter.", "data": "Email del usuario: 'valido@dominio.com'", "expectedResults": "Se muestra '✓ Usuario 'Usuario Valido' creado exitosamente'."}
+    ]
+  },
+  {
+    "title": "HU-001 CA-2 - Validar email contiene '@' y '.'",
+    "description": "Validar que el sistema rechaza emails que no cumplen el formato (falta '@' o '.').",
+    "preconditions": "Aplicación iniciada en menú principal.",
+    "priority": "Crítica",
+    "status": "Listo",
+    "type": "Funcional",
+    "steps": [
+      {"stepId": 1, "stepDescription": "En el menú principal, oprimir '1' (Gestionar Usuarios).", "data": "(N/A)", "expectedResults": "Se muestra el submenú de Usuarios."},
+      {"stepId": 2, "stepDescription": "Oprimir '1' (Crear nuevo usuario).", "data": "(N/A)", "expectedResults": "El sistema solicita 'Nombre del usuario:'."},
+      {"stepId": 3, "stepDescription": "Ingresar nombre y presionar Enter.", "data": "Nombre del usuario: 'Usuario Falla'", "expectedResults": "El sistema solicita 'Email del usuario:'."},
+      {"stepId": 4, "stepDescription": "Ingresar email sin '@' y presionar Enter.", "data": "Email del usuario: 'emailinvalido.com'", "expectedResults": "Se muestra '✗ Email invalido'. No se crea el usuario."}
+    ]
+  },
+  {
+    "title": "HU-001 CA-3 - Listar usuarios registrados",
+    "description": "Validar que el usuario puede listar todos los usuarios del sistema.",
+    "preconditions": "Existe al menos un usuario creado previamente.",
+    "priority": "Alta",
+    "status": "Listo",
+    "type": "Funcional",
+    "steps": [
+      {"stepId": 1, "stepDescription": "En el menú principal, oprimir '1' (Gestionar Usuarios).", "data": "(N/A)", "expectedResults": "Se muestra el submenú de Usuarios."},
+      {"stepId": 2, "stepDescription": "Oprimir '2' (Listar usuarios).", "data": "(N/A)", "expectedResults": "Se muestra 'USUARIOS REGISTRADOS' con filas: '<nombre> | <email>'."}
+    ]
+  },
+  {
+    "title": "HU-001 CA-4 - Marcar usuario actual en listado",
+    "description": "Validar que el listado marca el usuario actual claramente.",
+    "preconditions": "Existe al menos un usuario y se ha seleccionado usuario actual.",
+    "priority": "Alta",
+    "status": "Listo",
+    "type": "Funcional",
+    "steps": [
+      {"stepId": 1, "stepDescription": "En el menú principal, oprimir '1' (Gestionar Usuarios).", "data": "(N/A)", "expectedResults": "Se muestra el submenú de Usuarios."},
+      {"stepId": 2, "stepDescription": "Oprimir '2' (Listar usuarios).", "data": "(N/A)", "expectedResults": "La fila del usuario actual aparece marcada con ' *' al final."}
+    ]
+  },
+  {
+    "title": "HU-001 CA-5 - Seleccionar usuario como actual",
+    "description": "Validar que se puede seleccionar un usuario existente como usuario actual.",
+    "preconditions": "Al menos un usuario creado previamente.",
+    "priority": "Alta",
+    "status": "Listo",
+    "type": "Funcional",
+    "steps": [
+      {"stepId": 1, "stepDescription": "En el menú principal, oprimir '1' (Gestionar Usuarios).", "data": "(N/A)", "expectedResults": "Se muestra el submenú de Usuarios."},
+      {"stepId": 2, "stepDescription": "Oprimir '3' (Seleccionar usuario actual).", "data": "(N/A)", "expectedResults": "Se muestra lista e input 'Seleccione el numero del usuario:'."},
+      {"stepId": 3, "stepDescription": "Ingresar '1' y presionar Enter.", "data": "Opción: '1'", "expectedResults": "Se muestra '✓ Usuario actual: <nombre>'."}
+    ]
+  },
+  {
+    "title": "HU-001 CA-6 - Eliminar usuario con confirmación",
+    "description": "Validar que se puede eliminar un usuario con confirmación previa.",
+    "preconditions": "Al menos un usuario creado previamente.",
+    "priority": "Alta",
+    "status": "Listo",
+    "type": "Funcional",
+    "steps": [
+      {"stepId": 1, "stepDescription": "En el menú principal, oprimir '1' (Gestionar Usuarios).", "data": "(N/A)", "expectedResults": "Se muestra el submenú de Usuarios."},
+      {"stepId": 2, "stepDescription": "Oprimir '4' (Eliminar usuario).", "data": "(N/A)", "expectedResults": "Se lista usuarios y se solicita 'Seleccione el usuario a eliminar:'."},
+      {"stepId": 3, "stepDescription": "Ingresar '1' y presionar Enter, luego confirmar.", "data": "Opción: '1' | Confirmación: 's'", "expectedResults": "Se muestra '✓ Usuario eliminado'."}
+    ]
+  },
+  {
+    "title": "HU-001 CA-7 - Evitar usuarios duplicados por email",
+    "description": "Validar que el sistema no permite duplicados por email (esperado).",
+    "preconditions": "Existe un usuario con email 'duplicado@dominio.com'.",
+    "priority": "Alta",
+    "status": "Propuesto",
+    "type": "Funcional",
+    "steps": [
+      {"stepId": 1, "stepDescription": "En el menú principal, oprimir '1' (Gestionar Usuarios).", "data": "(N/A)", "expectedResults": "Submenú de Usuarios visible."},
+      {"stepId": 2, "stepDescription": "Oprimir '1' (Crear nuevo usuario).", "data": "(N/A)", "expectedResults": "Prompt de nombre."},
+      {"stepId": 3, "stepDescription": "Ingresar nombre y presionar Enter.", "data": "'Usuario Duplicado'", "expectedResults": "Prompt de email."},
+      {"stepId": 4, "stepDescription": "Ingresar email existente y presionar Enter.", "data": "'duplicado@dominio.com'", "expectedResults": "Se espera mensaje de rechazo por email duplicado (no implementado actualmente)."}
+    ]
+  },
+  {
+    "title": "HU-001 CA-8 - Asignación de UUID a cada usuario",
+    "description": "Validar que cada usuario recibe un ID único automáticamente.",
+    "preconditions": "Crear un usuario válido antes del listado.",
+    "priority": "Media",
+    "status": "Listo",
+    "type": "Integración",
+    "steps": [
+      {"stepId": 1, "stepDescription": "Crear usuario válido (como en CA-1).", "data": "Nombre y email válidos", "expectedResults": "Usuario creado exitosamente."},
+      {"stepId": 2, "stepDescription": "Listar usuarios.", "data": "(N/A)", "expectedResults": "Se puede obtener el usuario y luego verificar en JSON que posee 'usuario_id' (UUID)."}
+    ]
+  },
+  {
+    "title": "HU-001 CA-9 - Fecha de creación de cada usuario",
+    "description": "Validar que se guarda la fecha de creación del usuario.",
+    "preconditions": "Existe un usuario recién creado.",
+    "priority": "Media",
+    "status": "Listo",
+    "type": "Integración",
+    "steps": [
+      {"stepId": 1, "stepDescription": "Crear usuario válido (como en CA-1).", "data": "(N/A)", "expectedResults": "Usuario creado."},
+      {"stepId": 2, "stepDescription": "Salir y verificar persistencia reiniciando la app; listar usuarios.", "data": "Comando: python main.py", "expectedResults": "El usuario persiste; la fecha puede validarse inspeccionando 'data/projects.json' (campo 'fecha_creacion')."}
+    ]
+  },
+  {
+    "title": "HU-001 CA-10 - Persistencia automática en JSON",
+    "description": "Validar que los cambios en usuarios se persisten automáticamente en JSON.",
+    "preconditions": "Sin usuarios al inicio.",
+    "priority": "Crítica",
+    "status": "Listo",
+    "type": "Integración",
+    "steps": [
+      {"stepId": 1, "stepDescription": "Crear usuario válido (CA-1).", "data": "(N/A)", "expectedResults": "Usuario creado."},
+      {"stepId": 2, "stepDescription": "Salir ('4') y reiniciar la app, listar usuarios.", "data": "Comando: python main.py", "expectedResults": "El usuario aparece en el listado (cargado desde JSON)."}
+    ]
+  },
+
+  {
+    "title": "HU-010 CA-1 - Guardado automático después de crear usuarios",
+    "description": "Validar que tras crear un usuario, los datos se guardan automáticamente.",
+    "preconditions": "Sin usuarios al inicio.",
+    "priority": "Crítica",
+    "status": "Listo",
+    "type": "Integración",
+    "steps": [
+      {"stepId": 1, "stepDescription": "Crear usuario válido (HU-001 CA-1).", "data": "(N/A)", "expectedResults": "Se muestra éxito de creación."},
+      {"stepId": 2, "stepDescription": "Salir y reiniciar la app; listar usuarios.", "data": "Comando: python main.py", "expectedResults": "El usuario persiste (guardado automático)."}
+    ]
+  },
+  {
+    "title": "HU-010 CA-2 - Guardado automático después de crear proyectos",
+    "description": "Validar guardado después de crear proyecto.",
+    "preconditions": "Existe usuario actual seleccionado.",
+    "priority": "Crítica",
+    "status": "Listo",
+    "type": "Integración",
+    "steps": [
+      {"stepId": 1, "stepDescription": "En menú principal, oprimir '2' (Gestionar Proyectos).", "data": "(N/A)", "expectedResults": "Submenú de Proyectos visible."},
+      {"stepId": 2, "stepDescription": "Oprimir '1' (Crear nuevo proyecto).", "data": "(N/A)", "expectedResults": "Prompt de nombre."},
+      {"stepId": 3, "stepDescription": "Ingresar nombre y descripción válidos.", "data": "Nombre: 'Proyecto Auto' | Descripción: 'CA-2'", "expectedResults": "Se muestra '✓ Proyecto 'Proyecto Auto' creado exitosamente'."},
+      {"stepId": 4, "stepDescription": "Salir y reiniciar; listar proyectos.", "data": "Comando: python main.py", "expectedResults": "El proyecto aparece (guardado automático)."}
+    ]
+  },
+  {
+    "title": "HU-010 CA-3 - Guardado automático después de crear tareas",
+    "description": "Validar guardado tras crear una tarea en proyecto abierto.",
+    "preconditions": "Proyecto actual seleccionado con columnas por defecto.",
+    "priority": "Crítica",
+    "status": "Listo",
+    "type": "Integración",
+    "steps": [
+      {"stepId": 1, "stepDescription": "En menú principal, oprimir '3' (Trabajar con Proyecto Actual).", "data": "(N/A)", "expectedResults": "Se muestra menú del proyecto."},
+      {"stepId": 2, "stepDescription": "Oprimir '2' (Agregar tarea).", "data": "(N/A)", "expectedResults": "Se muestra 'AGREGAR NUEVA TAREA'."},
+      {"stepId": 3, "stepDescription": "Completar título, descripción, prioridad y columna válidos.", "data": "Titulo: 'Tarea CA-3' | Descripción: 'Prueba' | Prioridad: 'Media' | Columna: 'Pendiente'", "expectedResults": "Se muestra '✓ Tarea 'Tarea CA-3' agregada a 'Pendiente'' y se guarda el proyecto."},
+      {"stepId": 4, "stepDescription": "Salir y reiniciar; ver tablero (opción '1').", "data": "(N/A)", "expectedResults": "La tarea aparece en 'Pendiente' (persistida)."}
+    ]
+  },
+  {
+    "title": "HU-010 CA-4 - Guardado automático después de editar tareas",
+    "description": "Validar guardado al editar atributos de una tarea.",
+    "preconditions": "Existe tarea creada en el proyecto.",
+    "priority": "Crítica",
+    "status": "Listo",
+    "type": "Integración",
+    "steps": [
+      {"stepId": 1, "stepDescription": "Oprimir '3' (Buscar tarea) y escribir 'Tarea CA-3'.", "data": "Termino: 'Tarea CA-3'", "expectedResults": "Se lista la tarea encontrada."},
+      {"stepId": 2, "stepDescription": "Seleccionar la tarea para editar e ingresar '0' para guardar y volver tras cambios.", "data": "Opción: '1'", "expectedResults": "Dentro de edición, cambiar prioridad a 'Alta' y estado a 'En Progreso'; luego '0' muestra '✓ Cambios guardados'."},
+      {"stepId": 3, "stepDescription": "Salir y reiniciar; ver tablero.", "data": "(N/A)", "expectedResults": "La tarea refleja cambios persistidos."}
+    ]
+  },
+  {
+    "title": "HU-010 CA-5 - Guardado automático después de eliminar datos",
+    "description": "Validar guardado al eliminar usuarios/tareas/proyectos.",
+    "preconditions": "Existe al menos un elemento a eliminar.",
+    "priority": "Crítica",
+    "status": "Listo",
+    "type": "Integración",
+    "steps": [
+      {"stepId": 1, "stepDescription": "Eliminar usuario (HU-001 CA-6).", "data": "Confirmación 's'", "expectedResults": "Se muestra '✓ Usuario eliminado'."},
+      {"stepId": 2, "stepDescription": "Salir y reiniciar; listar usuarios.", "data": "Comando: python main.py", "expectedResults": "El usuario eliminado no aparece (persistencia de eliminación)."}
+    ]
+  },
+  {
+    "title": "HU-010 CA-6 - Datos en formato JSON bien estructurado",
+    "description": "Validar estructura JSON en disco (proyectos/usuarios).",
+    "preconditions": "Existen usuarios y proyectos guardados.",
+    "priority": "Media",
+    "status": "Listo",
+    "type": "Integración",
+    "steps": [
+      {"stepId": 1, "stepDescription": "Salir de la app y en la terminal ejecutar 'cat data/projects.json'.", "data": "Comando: cat data/projects.json", "expectedResults": "El contenido muestra objetos con claves esperadas (usuarios, proyectos)."}
+    ]
+  },
+  {
+    "title": "HU-010 CA-7 - Creación automática de carpeta data/",
+    "description": "Validar que se crea automáticamente la carpeta data/ si no existe.",
+    "preconditions": "Eliminar carpeta 'data/' antes de iniciar.",
+    "priority": "Media",
+    "status": "Listo",
+    "type": "Integración",
+    "steps": [
+      {"stepId": 1, "stepDescription": "En la terminal, iniciar la app con 'python main.py'.", "data": "Comando: python main.py", "expectedResults": "La app arranca y se crea 'data/' automáticamente por configuración."}
+    ]
+  },
+  {
+    "title": "HU-010 CA-8 - Creación automática de projects.json",
+    "description": "Validar que se crea automáticamente el archivo projects.json si no existe.",
+    "preconditions": "Eliminar 'data/projects.json' antes de iniciar.",
+    "priority": "Media",
+    "status": "Listo",
+    "type": "Integración",
+    "steps": [
+      {"stepId": 1, "stepDescription": "Iniciar la app con 'python main.py'.", "data": "Comando: python main.py", "expectedResults": "Se crea 'data/projects.json' vacío con estructura por defecto (usuarios, proyectos)."}
+    ]
+  },
+  {
+    "title": "HU-010 CA-9 - Validación de estructura JSON antes de guardar",
+    "description": "Validar que el sistema verifica estructura antes de escritura (esperado).",
+    "preconditions": "Datos en memoria listos para guardar.",
+    "priority": "Media",
+    "status": "Propuesto",
+    "type": "Integración",
+    "steps": [
+      {"stepId": 1, "stepDescription": "Crear proyecto y tarea; guardar cambios.", "data": "(N/A)", "expectedResults": "Se espera validación de estructura previa al guardado (no observable explícitamente en CLI)."}
+    ]
+  },
+  {
+    "title": "HU-010 CA-10 - Recuperación automática de datos tras reinicio",
+    "description": "Validar que al reiniciar la app se recargan datos persistidos.",
+    "preconditions": "Existen usuarios/proyectos previamente creados.",
+    "priority": "Crítica",
+    "status": "Listo",
+    "type": "Integración",
+    "steps": [
+      {"stepId": 1, "stepDescription": "Salir y reiniciar la app; listar usuarios y proyectos.", "data": "Comando: python main.py", "expectedResults": "Los elementos aparecen cargados automáticamente."}
+    ]
+  },
+  {
+    "title": "HU-010 CA-11 - Respaldos fáciles (copiar projects.json)",
+    "description": "Validar que se puede respaldar el archivo JSON fácilmente.",
+    "preconditions": "Existe 'data/projects.json'.",
+    "priority": "Media",
+    "status": "Listo",
+    "type": "Operacional",
+    "steps": [
+      {"stepId": 1, "stepDescription": "En la terminal, ejecutar copia del archivo (fuera de la app).", "data": "Comando: cp data/projects.json backup.json", "expectedResults": "El archivo 'backup.json' se crea exitosamente."}
+    ]
+  },
+  {
+    "title": "HU-010 CA-12 - Recuperación elegante de JSON corrupto",
+    "description": "Validar que el sistema se recupera si el JSON está corrupto.",
+    "preconditions": "Corromper 'data/projects.json' manualmente.",
+    "priority": "Media",
+    "status": "Listo",
+    "type": "Integración",
+    "steps": [
+      {"stepId": 1, "stepDescription": "En la terminal, escribir contenido inválido en 'data/projects.json' y arrancar la app.", "data": "Contenido inválido", "expectedResults": "La app no falla; se muestran datos vacíos por recuperación ('proyectos': [], 'usuarios': [])."}
+    ]
+  }
+]

@@ -1,0 +1,602 @@
+[
+  {
+    "title": "HU-002 CA-1: Crear proyecto con nombre y descripción",
+    "description": "Validar que el usuario puede crear un nuevo proyecto especificando nombre y descripción",
+    "preconditions": "Usuario actual seleccionado en el sistema",
+    "priority": "Crítica",
+    "status": "Diseñado",
+    "type": "Funcional",
+    "owner": "Julian",
+    "steps": [
+      {
+        "stepDescription": "En el menú principal, oprimir '2' (Gestionar Proyectos)",
+        "data": "2",
+        "expectedResults": "Se muestra el menú de Gestión de Proyectos"
+      },
+      {
+        "stepDescription": "En el menú de Proyectos, oprimir '1' (Crear nuevo proyecto)",
+        "data": "1",
+        "expectedResults": "El sistema solicita 'Nombre del proyecto:'"
+      },
+      {
+        "stepDescription": "Cuando el sistema solicite 'Nombre del proyecto:', escribir 'Proyecto Test' y presionar Enter",
+        "data": "Proyecto Test",
+        "expectedResults": "El sistema solicita 'Descripcion del proyecto (opcional):'"
+      },
+      {
+        "stepDescription": "Cuando el sistema solicite 'Descripcion del proyecto (opcional):', escribir 'Descripción de prueba' y presionar Enter",
+        "data": "Descripción de prueba",
+        "expectedResults": "El sistema muestra 'Proyecto 'Proyecto Test' creado exitosamente'"
+      }
+    ]
+  },
+  {
+    "title": "HU-002 CA-2: Validar que el nombre del proyecto es obligatorio",
+    "description": "Validar que el sistema no permite crear un proyecto sin nombre",
+    "preconditions": "Usuario actual seleccionado en el sistema",
+    "priority": "Crítica",
+    "status": "Diseñado",
+    "type": "Validación",
+    "owner": "Jeferson",
+    "steps": [
+      {
+        "stepDescription": "En el menú principal, oprimir '2' (Gestionar Proyectos)",
+        "data": "2",
+        "expectedResults": "Se muestra el menú de Gestión de Proyectos"
+      },
+      {
+        "stepDescription": "En el menú de Proyectos, oprimir '1' (Crear nuevo proyecto)",
+        "data": "1",
+        "expectedResults": "El sistema solicita 'Nombre del proyecto:'"
+      },
+      {
+        "stepDescription": "Cuando el sistema solicite 'Nombre del proyecto:', presionar Enter sin escribir nada",
+        "data": "",
+        "expectedResults": "El sistema muestra 'El nombre no puede estar vacio'"
+      }
+    ]
+  },
+  {
+    "title": "HU-002 CA-3: Validar asignación automática de ID único (UUID)",
+    "description": "Validar que cada proyecto recibe un ID único (UUID) asignado automáticamente",
+    "preconditions": "Usuario actual seleccionado en el sistema",
+    "priority": "Crítica",
+    "status": "Diseñado",
+    "type": "Funcional",
+    "owner": "Julian",
+    "steps": [
+      {
+        "stepDescription": "En el menú principal, oprimir '2' (Gestionar Proyectos)",
+        "data": "2",
+        "expectedResults": "Se muestra el menú de Gestión de Proyectos"
+      },
+      {
+        "stepDescription": "En el menú de Proyectos, oprimir '1' (Crear nuevo proyecto)",
+        "data": "1",
+        "expectedResults": "El sistema solicita 'Nombre del proyecto:'"
+      },
+      {
+        "stepDescription": "Cuando el sistema solicite 'Nombre del proyecto:', escribir 'Proyecto UUID Test' y presionar Enter",
+        "data": "Proyecto UUID Test",
+        "expectedResults": "El sistema solicita 'Descripcion del proyecto (opcional):'"
+      },
+      {
+        "stepDescription": "Cuando el sistema solicite 'Descripcion del proyecto (opcional):', presionar Enter sin escribir nada",
+        "data": "",
+        "expectedResults": "El sistema muestra 'Proyecto 'Proyecto UUID Test' creado exitosamente' y el proyecto tiene un UUID único asignado"
+      }
+    ]
+  },
+  {
+    "title": "HU-002 CA-4: Validar asignación automática del usuario actual como propietario",
+    "description": "Validar que el sistema asigna automáticamente el usuario actual como propietario del proyecto",
+    "preconditions": "Usuario actual seleccionado en el sistema",
+    "priority": "Crítica",
+    "status": "Diseñado",
+    "type": "Funcional",
+    "owner": "Jeferson",
+    "steps": [
+      {
+        "stepDescription": "En el menú principal, oprimir '2' (Gestionar Proyectos)",
+        "data": "2",
+        "expectedResults": "Se muestra el menú de Gestión de Proyectos"
+      },
+      {
+        "stepDescription": "En el menú de Proyectos, oprimir '1' (Crear nuevo proyecto)",
+        "data": "1",
+        "expectedResults": "El sistema solicita 'Nombre del proyecto:'"
+      },
+      {
+        "stepDescription": "Cuando el sistema solicite 'Nombre del proyecto:', escribir 'Proyecto Propietario' y presionar Enter",
+        "data": "Proyecto Propietario",
+        "expectedResults": "El sistema solicita 'Descripcion del proyecto (opcional):'"
+      },
+      {
+        "stepDescription": "Cuando el sistema solicite 'Descripcion del proyecto (opcional):', presionar Enter sin escribir nada",
+        "data": "",
+        "expectedResults": "El sistema muestra 'Proyecto 'Proyecto Propietario' creado exitosamente' y el proyecto tiene asignado el usuario actual como propietario"
+      }
+    ]
+  },
+  {
+    "title": "HU-002 CA-5: Validar creación automática de tres columnas por defecto",
+    "description": "Validar que se crean automáticamente tres columnas: Pendiente, En Progreso, Completada",
+    "preconditions": "Usuario actual seleccionado en el sistema",
+    "priority": "Crítica",
+    "status": "Diseñado",
+    "type": "Funcional",
+    "owner": "Julian",
+    "steps": [
+      {
+        "stepDescription": "En el menú principal, oprimir '2' (Gestionar Proyectos)",
+        "data": "2",
+        "expectedResults": "Se muestra el menú de Gestión de Proyectos"
+      },
+      {
+        "stepDescription": "En el menú de Proyectos, oprimir '1' (Crear nuevo proyecto)",
+        "data": "1",
+        "expectedResults": "El sistema solicita 'Nombre del proyecto:'"
+      },
+      {
+        "stepDescription": "Cuando el sistema solicite 'Nombre del proyecto:', escribir 'Proyecto Columnas' y presionar Enter",
+        "data": "Proyecto Columnas",
+        "expectedResults": "El sistema solicita 'Descripcion del proyecto (opcional):'"
+      },
+      {
+        "stepDescription": "Cuando el sistema solicite 'Descripcion del proyecto (opcional):', presionar Enter sin escribir nada",
+        "data": "",
+        "expectedResults": "El sistema muestra 'Proyecto 'Proyecto Columnas' creado exitosamente'"
+      },
+      {
+        "stepDescription": "En el menú principal, oprimir '3' (Trabajar con Proyecto Actual)",
+        "data": "3",
+        "expectedResults": "Se muestra el menú de Trabajar con Proyecto Actual"
+      },
+      {
+        "stepDescription": "En el menú de Trabajar con Proyecto Actual, oprimir la opción para gestionar columnas",
+        "data": "(N/A)",
+        "expectedResults": "El sistema muestra las tres columnas: Pendiente, En Progreso, Completada"
+      }
+    ]
+  },
+  {
+    "title": "HU-002 CA-6: Abrir/seleccionar un proyecto existente",
+    "description": "Validar que el usuario puede abrir/seleccionar un proyecto existente",
+    "preconditions": "Usuario actual seleccionado, al menos un proyecto creado",
+    "priority": "Crítica",
+    "status": "Diseñado",
+    "type": "Funcional",
+    "owner": "Jeferson",
+    "steps": [
+      {
+        "stepDescription": "En el menú principal, oprimir '2' (Gestionar Proyectos)",
+        "data": "2",
+        "expectedResults": "Se muestra el menú de Gestión de Proyectos"
+      },
+      {
+        "stepDescription": "En el menú de Proyectos, oprimir '3' (Abrir proyecto)",
+        "data": "3",
+        "expectedResults": "El sistema muestra la lista de proyectos disponibles"
+      },
+      {
+        "stepDescription": "Cuando el sistema solicite 'Seleccione el proyecto:', escribir '1' y presionar Enter",
+        "data": "1",
+        "expectedResults": "El sistema muestra 'Proyecto actual: [nombre del proyecto]'"
+      }
+    ]
+  },
+  {
+    "title": "HU-002 CA-7: Listar todos los proyectos con conteo de tareas",
+    "description": "Validar que el usuario puede listar todos los proyectos con conteo de tareas",
+    "preconditions": "Usuario actual seleccionado, al menos un proyecto creado",
+    "priority": "Crítica",
+    "status": "Diseñado",
+    "type": "Funcional",
+    "owner": "Julian",
+    "steps": [
+      {
+        "stepDescription": "En el menú principal, oprimir '2' (Gestionar Proyectos)",
+        "data": "2",
+        "expectedResults": "Se muestra el menú de Gestión de Proyectos"
+      },
+      {
+        "stepDescription": "En el menú de Proyectos, oprimir '2' (Listar proyectos)",
+        "data": "2",
+        "expectedResults": "El sistema muestra la lista de proyectos con formato: '[número]. [nombre] | [X] tareas | [Y] columnas'"
+      }
+    ]
+  },
+  {
+    "title": "HU-002 CA-8: Eliminar un proyecto con confirmación previa",
+    "description": "Validar que el usuario puede eliminar un proyecto con confirmación previa",
+    "preconditions": "Usuario actual seleccionado, al menos un proyecto creado",
+    "priority": "Crítica",
+    "status": "Diseñado",
+    "type": "Funcional",
+    "owner": "Jeferson",
+    "steps": [
+      {
+        "stepDescription": "En el menú principal, oprimir '2' (Gestionar Proyectos)",
+        "data": "2",
+        "expectedResults": "Se muestra el menú de Gestión de Proyectos"
+      },
+      {
+        "stepDescription": "En el menú de Proyectos, oprimir '4' (Eliminar proyecto)",
+        "data": "4",
+        "expectedResults": "El sistema muestra la lista de proyectos disponibles"
+      },
+      {
+        "stepDescription": "Cuando el sistema solicite 'Seleccione el proyecto a eliminar:', escribir '1' y presionar Enter",
+        "data": "1",
+        "expectedResults": "El sistema solicita 'Eliminar '[nombre del proyecto]'? (s/n):'"
+      },
+      {
+        "stepDescription": "Cuando el sistema solicite confirmación, escribir 's' y presionar Enter",
+        "data": "s",
+        "expectedResults": "El sistema muestra 'Proyecto eliminado'"
+      }
+    ]
+  },
+  {
+    "title": "HU-002 CA-9: Validar guardado de fechas de creación y última modificación",
+    "description": "Validar que se guardan las fechas de creación y última modificación",
+    "preconditions": "Usuario actual seleccionado en el sistema",
+    "priority": "Crítica",
+    "status": "Diseñado",
+    "type": "Funcional",
+    "owner": "Julian",
+    "steps": [
+      {
+        "stepDescription": "En el menú principal, oprimir '2' (Gestionar Proyectos)",
+        "data": "2",
+        "expectedResults": "Se muestra el menú de Gestión de Proyectos"
+      },
+      {
+        "stepDescription": "En el menú de Proyectos, oprimir '1' (Crear nuevo proyecto)",
+        "data": "1",
+        "expectedResults": "El sistema solicita 'Nombre del proyecto:'"
+      },
+      {
+        "stepDescription": "Cuando el sistema solicite 'Nombre del proyecto:', escribir 'Proyecto Fechas' y presionar Enter",
+        "data": "Proyecto Fechas",
+        "expectedResults": "El sistema solicita 'Descripcion del proyecto (opcional):'"
+      },
+      {
+        "stepDescription": "Cuando el sistema solicite 'Descripcion del proyecto (opcional):', presionar Enter sin escribir nada",
+        "data": "",
+        "expectedResults": "El sistema muestra 'Proyecto 'Proyecto Fechas' creado exitosamente' y el proyecto tiene fecha de creación y modificación guardadas"
+      }
+    ]
+  },
+  {
+    "title": "HU-002 CA-10: Validar persistencia automática en JSON",
+    "description": "Validar que todos los cambios se persisten automáticamente en JSON",
+    "preconditions": "Usuario actual seleccionado en el sistema",
+    "priority": "Crítica",
+    "status": "Diseñado",
+    "type": "Funcional",
+    "owner": "Jeferson",
+    "steps": [
+      {
+        "stepDescription": "En el menú principal, oprimir '2' (Gestionar Proyectos)",
+        "data": "2",
+        "expectedResults": "Se muestra el menú de Gestión de Proyectos"
+      },
+      {
+        "stepDescription": "En el menú de Proyectos, oprimir '1' (Crear nuevo proyecto)",
+        "data": "1",
+        "expectedResults": "El sistema solicita 'Nombre del proyecto:'"
+      },
+      {
+        "stepDescription": "Cuando el sistema solicite 'Nombre del proyecto:', escribir 'Proyecto Persistencia' y presionar Enter",
+        "data": "Proyecto Persistencia",
+        "expectedResults": "El sistema solicita 'Descripcion del proyecto (opcional):'"
+      },
+      {
+        "stepDescription": "Cuando el sistema solicite 'Descripcion del proyecto (opcional):', presionar Enter sin escribir nada",
+        "data": "",
+        "expectedResults": "El sistema muestra 'Proyecto 'Proyecto Persistencia' creado exitosamente' y el proyecto se guarda en data/projects.json"
+      }
+    ]
+  },
+  {
+    "title": "HU-007 CA-1: Agregar una nueva columna especificando su nombre",
+    "description": "Validar que el usuario puede agregar una nueva columna especificando su nombre",
+    "preconditions": "Usuario actual seleccionado, proyecto actual abierto",
+    "priority": "Alta",
+    "status": "Diseñado",
+    "type": "Funcional",
+    "owner": "Julian",
+    "steps": [
+      {
+        "stepDescription": "En el menú principal, oprimir '3' (Trabajar con Proyecto Actual)",
+        "data": "3",
+        "expectedResults": "Se muestra el menú de Trabajar con Proyecto Actual"
+      },
+      {
+        "stepDescription": "En el menú de Trabajar con Proyecto Actual, oprimir '4' (Gestionar columnas)",
+        "data": "4",
+        "expectedResults": "Se muestra el menú de Gestión de Columnas"
+      },
+      {
+        "stepDescription": "En el menú de Gestión de Columnas, oprimir 'a' (Agregar columna)",
+        "data": "a",
+        "expectedResults": "El sistema solicita 'Nombre de la nueva columna:'"
+      },
+      {
+        "stepDescription": "Cuando el sistema solicite 'Nombre de la nueva columna:', escribir 'Revisión' y presionar Enter",
+        "data": "Revisión",
+        "expectedResults": "El sistema muestra 'Columna agregada'"
+      }
+    ]
+  },
+  {
+    "title": "HU-007 CA-2: Ver la lista completa de columnas actuales",
+    "description": "Validar que el usuario puede ver la lista completa de columnas actuales",
+    "preconditions": "Usuario actual seleccionado, proyecto actual abierto",
+    "priority": "Alta",
+    "status": "Diseñado",
+    "type": "Funcional",
+    "owner": "Jeferson",
+    "steps": [
+      {
+        "stepDescription": "En el menú principal, oprimir '3' (Trabajar con Proyecto Actual)",
+        "data": "3",
+        "expectedResults": "Se muestra el menú de Trabajar con Proyecto Actual"
+      },
+      {
+        "stepDescription": "En el menú de Trabajar con Proyecto Actual, oprimir la opción para gestionar columnas",
+        "data": "(N/A)",
+        "expectedResults": "El sistema muestra la lista de columnas con formato: '[número]. [nombre] ([X] tareas)'"
+      }
+    ]
+  },
+  {
+    "title": "HU-007 CA-3: Renombrar una columna existente",
+    "description": "Validar que el usuario puede renombrar una columna existente",
+    "preconditions": "Usuario actual seleccionado, proyecto actual abierto, al menos una columna existente",
+    "priority": "Alta",
+    "status": "Diseñado",
+    "type": "Funcional",
+    "owner": "Julian",
+    "steps": [
+      {
+        "stepDescription": "En el menú principal, oprimir '3' (Trabajar con Proyecto Actual)",
+        "data": "3",
+        "expectedResults": "Se muestra el menú de Trabajar con Proyecto Actual"
+      },
+      {
+        "stepDescription": "En el menú de Trabajar con Proyecto Actual, oprimir '4' (Gestionar columnas)",
+        "data": "4",
+        "expectedResults": "Se muestra el menú de Gestión de Columnas"
+      },
+      {
+        "stepDescription": "En el menú de Gestión de Columnas, oprimir 'r' (Renombrar columna)",
+        "data": "r",
+        "expectedResults": "El sistema solicita 'Numero de columna a renombrar:'"
+      },
+      {
+        "stepDescription": "Cuando el sistema solicite 'Numero de columna a renombrar:', escribir '1' y presionar Enter",
+        "data": "1",
+        "expectedResults": "El sistema solicita 'Nuevo nombre:'"
+      },
+      {
+        "stepDescription": "Cuando el sistema solicite 'Nuevo nombre:', escribir 'Pendientes' y presionar Enter",
+        "data": "Pendientes",
+        "expectedResults": "El sistema muestra 'Columna renombrada'"
+      }
+    ]
+  },
+  {
+    "title": "HU-007 CA-4: Eliminar una columna con confirmación previa",
+    "description": "Validar que el usuario puede eliminar una columna con confirmación previa",
+    "preconditions": "Usuario actual seleccionado, proyecto actual abierto, al menos una columna existente",
+    "priority": "Alta",
+    "status": "Diseñado",
+    "type": "Funcional",
+    "owner": "Jeferson",
+    "steps": [
+      {
+        "stepDescription": "En el menú principal, oprimir '3' (Trabajar con Proyecto Actual)",
+        "data": "3",
+        "expectedResults": "Se muestra el menú de Trabajar con Proyecto Actual"
+      },
+      {
+        "stepDescription": "En el menú de Trabajar con Proyecto Actual, oprimir '4' (Gestionar columnas)",
+        "data": "4",
+        "expectedResults": "Se muestra el menú de Gestión de Columnas"
+      },
+      {
+        "stepDescription": "En el menú de Gestión de Columnas, oprimir 'd' (Eliminar columna)",
+        "data": "d",
+        "expectedResults": "El sistema solicita 'Numero de columna a eliminar:'"
+      },
+      {
+        "stepDescription": "Cuando el sistema solicite 'Numero de columna a eliminar:', escribir '1' y presionar Enter",
+        "data": "1",
+        "expectedResults": "El sistema solicita 'Eliminar '[nombre de columna]'? (s/n):'"
+      },
+      {
+        "stepDescription": "Cuando el sistema solicite confirmación, escribir 's' y presionar Enter",
+        "data": "s",
+        "expectedResults": "El sistema muestra 'Columna eliminada'"
+      }
+    ]
+  },
+  {
+    "title": "HU-007 CA-5: Validar eliminación automática de tareas al eliminar columna",
+    "description": "Validar que al eliminar una columna, se eliminan automáticamente todas sus tareas",
+    "preconditions": "Usuario actual seleccionado, proyecto actual abierto, columna con tareas existente",
+    "priority": "Alta",
+    "status": "Diseñado",
+    "type": "Funcional",
+    "owner": "Julian",
+    "steps": [
+      {
+        "stepDescription": "En el menú principal, oprimir '3' (Trabajar con Proyecto Actual)",
+        "data": "3",
+        "expectedResults": "Se muestra el menú de Trabajar con Proyecto Actual"
+      },
+      {
+        "stepDescription": "En el menú de Trabajar con Proyecto Actual, oprimir '4' (Gestionar columnas)",
+        "data": "4",
+        "expectedResults": "Se muestra el menú de Gestión de Columnas"
+      },
+      {
+        "stepDescription": "En el menú de Gestión de Columnas, oprimir 'd' (Eliminar columna)",
+        "data": "d",
+        "expectedResults": "El sistema solicita 'Numero de columna a eliminar:'"
+      },
+      {
+        "stepDescription": "Cuando el sistema solicite 'Numero de columna a eliminar:', escribir el número de una columna con tareas y presionar Enter",
+        "data": "(N/A)",
+        "expectedResults": "El sistema solicita 'Eliminar '[nombre de columna]'? (s/n):'"
+      },
+      {
+        "stepDescription": "Cuando el sistema solicite confirmación, escribir 's' y presionar Enter",
+        "data": "s",
+        "expectedResults": "El sistema muestra 'Columna eliminada' y todas las tareas de la columna también se eliminan"
+      }
+    ]
+  },
+  {
+    "title": "HU-007 CA-6: Validar advertencia al eliminar columna con tareas",
+    "description": "Validar que el sistema advierte al usuario si una columna contiene tareas",
+    "preconditions": "Usuario actual seleccionado, proyecto actual abierto, columna con tareas existente",
+    "priority": "Alta",
+    "status": "Diseñado",
+    "type": "Validación",
+    "owner": "Jeferson",
+    "steps": [
+      {
+        "stepDescription": "En el menú principal, oprimir '3' (Trabajar con Proyecto Actual)",
+        "data": "3",
+        "expectedResults": "Se muestra el menú de Trabajar con Proyecto Actual"
+      },
+      {
+        "stepDescription": "En el menú de Trabajar con Proyecto Actual, oprimir la opción para gestionar columnas",
+        "data": "(N/A)",
+        "expectedResults": "Se muestra el menú de Gestión de Columnas con el conteo de tareas por columna"
+      },
+      {
+        "stepDescription": "Verificar que las columnas con tareas muestran el conteo en formato '[número]. [nombre] ([X] tareas)'",
+        "data": "(N/A)",
+        "expectedResults": "El sistema muestra el conteo de tareas para cada columna, indicando cuáles tienen tareas"
+      }
+    ]
+  },
+  {
+    "title": "HU-007 CA-7: Validar que las columnas mantienen un orden específico (Kanban)",
+    "description": "Validar que las columnas mantienen un orden específico (Kanban)",
+    "preconditions": "Usuario actual seleccionado, proyecto actual abierto, múltiples columnas existentes",
+    "priority": "Alta",
+    "status": "Diseñado",
+    "type": "Funcional",
+    "owner": "Julian",
+    "steps": [
+      {
+        "stepDescription": "En el menú principal, oprimir '3' (Trabajar con Proyecto Actual)",
+        "data": "3",
+        "expectedResults": "Se muestra el menú de Trabajar con Proyecto Actual"
+      },
+      {
+        "stepDescription": "En el menú de Trabajar con Proyecto Actual, oprimir la opción para gestionar columnas",
+        "data": "(N/A)",
+        "expectedResults": "El sistema muestra las columnas en el orden en que fueron creadas o configuradas"
+      }
+    ]
+  },
+  {
+    "title": "HU-007 CA-8: Validar que el nombre de la columna es campo obligatorio",
+    "description": "Validar que el sistema no permite crear una columna sin nombre",
+    "preconditions": "Usuario actual seleccionado, proyecto actual abierto",
+    "priority": "Alta",
+    "status": "Diseñado",
+    "type": "Validación",
+    "owner": "Jeferson",
+    "steps": [
+      {
+        "stepDescription": "En el menú principal, oprimir '3' (Trabajar con Proyecto Actual)",
+        "data": "3",
+        "expectedResults": "Se muestra el menú de Trabajar con Proyecto Actual"
+      },
+      {
+        "stepDescription": "En el menú de Trabajar con Proyecto Actual, oprimir '4' (Gestionar columnas)",
+        "data": "4",
+        "expectedResults": "Se muestra el menú de Gestión de Columnas"
+      },
+      {
+        "stepDescription": "En el menú de Gestión de Columnas, oprimir 'a' (Agregar columna)",
+        "data": "a",
+        "expectedResults": "El sistema solicita 'Nombre de la nueva columna:'"
+      },
+      {
+        "stepDescription": "Cuando el sistema solicite 'Nombre de la nueva columna:', presionar Enter sin escribir nada",
+        "data": "",
+        "expectedResults": "El sistema no crea la columna (el campo es obligatorio)"
+      }
+    ]
+  },
+  {
+    "title": "HU-007 CA-9: Validar que el sistema evita crear columnas duplicadas",
+    "description": "Validar que el sistema evita crear columnas duplicadas",
+    "preconditions": "Usuario actual seleccionado, proyecto actual abierto, columna 'Pendiente' existente",
+    "priority": "Alta",
+    "status": "Diseñado",
+    "type": "Validación",
+    "owner": "Julian",
+    "steps": [
+      {
+        "stepDescription": "En el menú principal, oprimir '3' (Trabajar con Proyecto Actual)",
+        "data": "3",
+        "expectedResults": "Se muestra el menú de Trabajar con Proyecto Actual"
+      },
+      {
+        "stepDescription": "En el menú de Trabajar con Proyecto Actual, oprimir '4' (Gestionar columnas)",
+        "data": "4",
+        "expectedResults": "Se muestra el menú de Gestión de Columnas"
+      },
+      {
+        "stepDescription": "En el menú de Gestión de Columnas, oprimir 'a' (Agregar columna)",
+        "data": "a",
+        "expectedResults": "El sistema solicita 'Nombre de la nueva columna:'"
+      },
+      {
+        "stepDescription": "Cuando el sistema solicite 'Nombre de la nueva columna:', escribir 'Pendiente' y presionar Enter",
+        "data": "Pendiente",
+        "expectedResults": "El sistema muestra 'Columna agregada' pero valida que no se crean duplicados (o muestra advertencia)"
+      }
+    ]
+  },
+  {
+    "title": "HU-007 CA-10: Validar guardado automático después de cambios de columnas",
+    "description": "Validar que el proyecto se guarda automáticamente después de cambios de columnas",
+    "preconditions": "Usuario actual seleccionado, proyecto actual abierto",
+    "priority": "Alta",
+    "status": "Diseñado",
+    "type": "Funcional",
+    "owner": "Jeferson",
+    "steps": [
+      {
+        "stepDescription": "En el menú principal, oprimir '3' (Trabajar con Proyecto Actual)",
+        "data": "3",
+        "expectedResults": "Se muestra el menú de Trabajar con Proyecto Actual"
+      },
+      {
+        "stepDescription": "En el menú de Trabajar con Proyecto Actual, oprimir '4' (Gestionar columnas)",
+        "data": "4",
+        "expectedResults": "Se muestra el menú de Gestión de Columnas"
+      },
+      {
+        "stepDescription": "En el menú de Gestión de Columnas, oprimir 'a' (Agregar columna)",
+        "data": "a",
+        "expectedResults": "El sistema solicita 'Nombre de la nueva columna:'"
+      },
+      {
+        "stepDescription": "Cuando el sistema solicite 'Nombre de la nueva columna:', escribir 'Nueva Columna' y presionar Enter",
+        "data": "Nueva Columna",
+        "expectedResults": "El sistema muestra 'Columna agregada' y el proyecto se guarda automáticamente en data/projects.json"
+      }
+    ]
+  }
+]

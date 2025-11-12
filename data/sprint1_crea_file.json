@@ -1,0 +1,11 @@
+{
+  "proyectos": [],
+  "usuarios": [
+    {
+      "usuario_id": "8e1a1efa-b85f-4854-9990-6fc34ce11009",
+      "nombre": "FileUser",
+      "email": "file@dominio.com",
+      "fecha_creacion": "2025-11-12T14:31:59.519749"
+    }
+  ]
+}

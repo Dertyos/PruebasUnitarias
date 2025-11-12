@@ -1,0 +1,274 @@
+[
+  {
+    "title": "HU-008 CA-1: Mostrar el total de tareas del proyecto",
+    "description": "Validar que se muestra el total de tareas del proyecto",
+    "preconditions": "Usuario actual seleccionado, proyecto actual abierto, al menos una tarea",
+    "priority": "Alta",
+    "status": "Diseñado",
+    "type": "Funcional",
+    "owner": "Julian",
+    "steps": [
+      {"stepDescription": "En el menú principal, oprimir '3' (Trabajar con Proyecto Actual)", "data": "3", "expectedResults": "Se muestra el menú de Trabajar con Proyecto Actual"},
+      {"stepDescription": "En el menú de Trabajar con Proyecto Actual, oprimir '5' (Ver estadisticas)", "data": "5", "expectedResults": "El sistema muestra 'ESTADISTICAS: [nombre proyecto]'"},
+      {"stepDescription": "Observar el encabezado de total de tareas", "data": "(N/A)", "expectedResults": "El sistema muestra 'Total de tareas: [n]'"}
+    ]
+  },
+  {
+    "title": "HU-008 CA-2: Mostrar conteo de tareas por estado",
+    "description": "Validar que se muestra el conteo de tareas por estado actual",
+    "preconditions": "Usuario actual seleccionado, proyecto actual abierto, tareas en distintos estados",
+    "priority": "Alta",
+    "status": "Diseñado",
+    "type": "Funcional",
+    "owner": "Jeferson",
+    "steps": [
+      {"stepDescription": "En el menú principal, oprimir '3' (Trabajar con Proyecto Actual)", "data": "3", "expectedResults": "Se muestra el menú de Trabajar con Proyecto Actual"},
+      {"stepDescription": "En el menú de Trabajar con Proyecto Actual, oprimir '5' (Ver estadisticas)", "data": "5", "expectedResults": "El sistema muestra 'POR ESTADO:'"},
+      {"stepDescription": "Observar las líneas de estado", "data": "(N/A)", "expectedResults": "El sistema muestra 'Pendiente: [X]', 'En Progreso: [Y]', 'Completada: [Z]', 'Bloqueada: [W]'"}
+    ]
+  },
+  {
+    "title": "HU-008 CA-3: Mostrar porcentaje de tareas por estado",
+    "description": "Validar que se muestra el porcentaje de tareas por estado",
+    "preconditions": "Usuario actual seleccionado, proyecto actual abierto",
+    "priority": "Alta",
+    "status": "Diseñado",
+    "type": "Funcional",
+    "owner": "Julian",
+    "steps": [
+      {"stepDescription": "En el menú principal, oprimir '3' (Trabajar con Proyecto Actual)", "data": "3", "expectedResults": "Se muestra el menú de Trabajar con Proyecto Actual"},
+      {"stepDescription": "En el menú de Trabajar con Proyecto Actual, oprimir '5' (Ver estadisticas)", "data": "5", "expectedResults": "El sistema muestra 'POR ESTADO:'"},
+      {"stepDescription": "Ver porcentajes en las líneas de estado", "data": "(N/A)", "expectedResults": "Cada línea de estado muestra porcentaje en formato '(N%)'"}
+    ]
+  },
+  {
+    "title": "HU-008 CA-4: Mostrar conteo por prioridad",
+    "description": "Validar que se muestra el conteo de tareas por nivel de prioridad",
+    "preconditions": "Usuario actual seleccionado, proyecto actual abierto, tareas con diferentes prioridades",
+    "priority": "Alta",
+    "status": "Diseñado",
+    "type": "Funcional",
+    "owner": "Jeferson",
+    "steps": [
+      {"stepDescription": "En el menú principal, oprimir '3' (Trabajar con Proyecto Actual)", "data": "3", "expectedResults": "Se muestra el menú de Trabajar con Proyecto Actual"},
+      {"stepDescription": "En el menú de Trabajar con Proyecto Actual, oprimir '5' (Ver estadisticas)", "data": "5", "expectedResults": "El sistema muestra 'POR PRIORIDAD:'"},
+      {"stepDescription": "Observar las líneas de prioridad", "data": "(N/A)", "expectedResults": "El sistema muestra 'Urgente: [U]', 'Alta: [A]', 'Media: [M]', 'Baja: [B]'"}
+    ]
+  },
+  {
+    "title": "HU-008 CA-5: Mostrar porcentaje por prioridad",
+    "description": "Validar que se muestra el porcentaje de tareas por prioridad",
+    "preconditions": "Usuario actual seleccionado, proyecto actual abierto",
+    "priority": "Alta",
+    "status": "Diseñado",
+    "type": "Funcional",
+    "owner": "Julian",
+    "steps": [
+      {"stepDescription": "En el menú principal, oprimir '3' (Trabajar con Proyecto Actual)", "data": "3", "expectedResults": "Se muestra el menú de Trabajar con Proyecto Actual"},
+      {"stepDescription": "En el menú de Trabajar con Proyecto Actual, oprimir '5' (Ver estadisticas)", "data": "5", "expectedResults": "El sistema muestra 'POR PRIORIDAD:'"},
+      {"stepDescription": "Ver porcentajes en las líneas de prioridad", "data": "(N/A)", "expectedResults": "Cada línea de prioridad muestra porcentaje en formato '(N%)'"}
+    ]
+  },
+  {
+    "title": "HU-008 CA-6: Mostrar conteo de tareas asignadas vs sin asignar",
+    "description": "Validar que se muestra el conteo de tareas asignadas vs sin asignar",
+    "preconditions": "Usuario actual seleccionado, proyecto actual abierto",
+    "priority": "Alta",
+    "status": "Diseñado",
+    "type": "Funcional",
+    "owner": "Jeferson",
+    "steps": [
+      {"stepDescription": "En el menú principal, oprimir '3' (Trabajar con Proyecto Actual)", "data": "3", "expectedResults": "Se muestra el menú de Trabajar con Proyecto Actual"},
+      {"stepDescription": "En el menú de Trabajar con Proyecto Actual, oprimir '5' (Ver estadisticas)", "data": "5", "expectedResults": "El sistema muestra 'ASIGNACION:'"},
+      {"stepDescription": "Observar las líneas de asignación", "data": "(N/A)", "expectedResults": "El sistema muestra 'Asignadas: [X]' y 'Sin asignar: [Y]'"}
+    ]
+  },
+  {
+    "title": "HU-008 CA-7: Mostrar porcentaje de tareas asignadas",
+    "description": "Validar que se muestra el porcentaje de tareas asignadas",
+    "preconditions": "Usuario actual seleccionado, proyecto actual abierto",
+    "priority": "Alta",
+    "status": "Diseñado",
+    "type": "Funcional",
+    "owner": "Julian",
+    "steps": [
+      {"stepDescription": "En el menú principal, oprimir '3' (Trabajar con Proyecto Actual)", "data": "3", "expectedResults": "Se muestra el menú de Trabajar con Proyecto Actual"},
+      {"stepDescription": "En el menú de Trabajar con Proyecto Actual, oprimir '5' (Ver estadisticas)", "data": "5", "expectedResults": "El sistema muestra 'ASIGNACION:'"},
+      {"stepDescription": "Ver porcentajes de asignación", "data": "(N/A)", "expectedResults": "Cada línea de asignación muestra porcentaje en formato '(N%)'"}
+    ]
+  },
+  {
+    "title": "HU-008 CA-8: Mostrar conteo de tareas por columna",
+    "description": "Validar que se muestra el conteo de tareas por columna",
+    "preconditions": "Usuario actual seleccionado, proyecto actual abierto, múltiples columnas",
+    "priority": "Alta",
+    "status": "Diseñado",
+    "type": "Funcional",
+    "owner": "Jeferson",
+    "steps": [
+      {"stepDescription": "En el menú principal, oprimir '3' (Trabajar con Proyecto Actual)", "data": "3", "expectedResults": "Se muestra el menú de Trabajar con Proyecto Actual"},
+      {"stepDescription": "En el menú de Trabajar con Proyecto Actual, oprimir '5' (Ver estadisticas)", "data": "5", "expectedResults": "El sistema muestra 'POR COLUMNA:'"},
+      {"stepDescription": "Observar el listado por columna", "data": "(N/A)", "expectedResults": "El sistema muestra '[nombre columna]: [N] tareas' por cada columna"}
+    ]
+  },
+  {
+    "title": "HU-008 CA-9: Mostrar progreso general (% completadas)",
+    "description": "Validar que se muestra el progreso general del proyecto en porcentaje de completadas",
+    "preconditions": "Usuario actual seleccionado, proyecto actual abierto",
+    "priority": "Alta",
+    "status": "Diseñado",
+    "type": "Funcional",
+    "owner": "Julian",
+    "steps": [
+      {"stepDescription": "En el menú principal, oprimir '3' (Trabajar con Proyecto Actual)", "data": "3", "expectedResults": "Se muestra el menú de Trabajar con Proyecto Actual"},
+      {"stepDescription": "En el menú de Trabajar con Proyecto Actual, oprimir '5' (Ver estadisticas)", "data": "5", "expectedResults": "Se muestran porcentajes por estado incluyendo 'Completada'"},
+      {"stepDescription": "Calcular visualmente el progreso", "data": "(N/A)", "expectedResults": "Se puede inferir el % completadas a partir de 'Completada: [n] ([p]%)'"}
+    ]
+  },
+  {
+    "title": "HU-008 CA-10: Identificar tareas retrasadas",
+    "description": "Validar que se identifican y muestran las tareas retrasadas",
+    "preconditions": "Usuario actual seleccionado, proyecto actual abierto, tareas con fecha de vencimiento",
+    "priority": "Alta",
+    "status": "Bloqueado",
+    "type": "Funcional",
+    "owner": "Jeferson",
+    "steps": [
+      {"stepDescription": "En el menú principal, oprimir '3' (Trabajar con Proyecto Actual)", "data": "3", "expectedResults": "Se muestra el menú de Trabajar con Proyecto Actual"},
+      {"stepDescription": "En el menú de Trabajar con Proyecto Actual, oprimir '5' (Ver estadisticas)", "data": "5", "expectedResults": "El sistema no muestra identificación explícita de tareas retrasadas"},
+      {"stepDescription": "Registrar la carencia", "data": "(N/A)", "expectedResults": "Caso bloqueado: funcionalidad de tareas retrasadas no implementada en CLI"}
+    ]
+  },
+
+  {
+    "title": "HU-009 CA-1: Exportar tareas a formato CSV",
+    "description": "Validar que el usuario puede exportar tareas a formato CSV",
+    "preconditions": "Usuario actual seleccionado, proyecto actual abierto, al menos una tarea",
+    "priority": "Media",
+    "status": "Bloqueado",
+    "type": "Funcional",
+    "owner": "Julian",
+    "steps": [
+      {"stepDescription": "En el menú principal, oprimir '3' (Trabajar con Proyecto Actual)", "data": "3", "expectedResults": "Se muestra el menú de Trabajar con Proyecto Actual"},
+      {"stepDescription": "Buscar opción de exportar datos", "data": "(N/A)", "expectedResults": "No existe una opción de exportación en el menú actual"},
+      {"stepDescription": "Registrar la carencia", "data": "(N/A)", "expectedResults": "Caso bloqueado: exportación CSV no implementada en CLI"}
+    ]
+  },
+  {
+    "title": "HU-009 CA-2: CSV incluye campos requeridos",
+    "description": "Validar que el archivo CSV incluye ID, Título, Descripción, Prioridad, Estado, Asignado",
+    "preconditions": "Usuario actual seleccionado, proyecto actual abierto",
+    "priority": "Media",
+    "status": "Bloqueado",
+    "type": "Funcional",
+    "owner": "Jeferson",
+    "steps": [
+      {"stepDescription": "Intentar exportar a CSV", "data": "(N/A)", "expectedResults": "No existe opción de exportación en CLI"},
+      {"stepDescription": "Validar contenido esperado", "data": "(N/A)", "expectedResults": "Caso bloqueado: validación de contenido CSV no alcanzable desde CLI"}
+    ]
+  },
+  {
+    "title": "HU-009 CA-3: Exportar a Markdown",
+    "description": "Validar que el usuario puede exportar el proyecto a formato Markdown",
+    "preconditions": "Usuario actual seleccionado, proyecto actual abierto",
+    "priority": "Media",
+    "status": "Bloqueado",
+    "type": "Funcional",
+    "owner": "Julian",
+    "steps": [
+      {"stepDescription": "Buscar opción de exportar datos", "data": "(N/A)", "expectedResults": "No existe una opción de exportación en CLI"},
+      {"stepDescription": "Registrar la carencia", "data": "(N/A)", "expectedResults": "Caso bloqueado: exportación Markdown no implementada en CLI"}
+    ]
+  },
+  {
+    "title": "HU-009 CA-4: Markdown con estructura jerárquica",
+    "description": "Validar que el archivo Markdown tiene estructura jerárquica legible",
+    "preconditions": "Usuario actual seleccionado, proyecto actual abierto",
+    "priority": "Media",
+    "status": "Bloqueado",
+    "type": "Funcional",
+    "owner": "Jeferson",
+    "steps": [
+      {"stepDescription": "Intentar exportar a Markdown", "data": "(N/A)", "expectedResults": "No existe opción de exportación en CLI"},
+      {"stepDescription": "Validar estructura jerárquica", "data": "(N/A)", "expectedResults": "Caso bloqueado: no se puede validar desde CLI"}
+    ]
+  },
+  {
+    "title": "HU-009 CA-5: Exportar a JSON",
+    "description": "Validar que el usuario puede exportar el proyecto a formato JSON",
+    "preconditions": "Usuario actual seleccionado, proyecto actual abierto",
+    "priority": "Media",
+    "status": "Bloqueado",
+    "type": "Funcional",
+    "owner": "Julian",
+    "steps": [
+      {"stepDescription": "Buscar opción de exportar datos", "data": "(N/A)", "expectedResults": "No existe una opción de exportación en CLI"},
+      {"stepDescription": "Registrar la carencia", "data": "(N/A)", "expectedResults": "Caso bloqueado: exportación JSON no implementada en CLI"}
+    ]
+  },
+  {
+    "title": "HU-009 CA-6: Nombres de archivos descriptivos",
+    "description": "Validar que los archivos exportados tienen nombres descriptivos y significativos",
+    "preconditions": "Usuario actual seleccionado, proyecto actual abierto",
+    "priority": "Media",
+    "status": "Bloqueado",
+    "type": "Funcional",
+    "owner": "Jeferson",
+    "steps": [
+      {"stepDescription": "Intentar exportar datos", "data": "(N/A)", "expectedResults": "No existe opción de exportación en CLI"},
+      {"stepDescription": "Validar nombres de archivos", "data": "(N/A)", "expectedResults": "Caso bloqueado: no se puede validar desde CLI"}
+    ]
+  },
+  {
+    "title": "HU-009 CA-7: Codificación UTF-8",
+    "description": "Validar que la codificación de archivos exportados es UTF-8",
+    "preconditions": "Usuario actual seleccionado, proyecto actual abierto",
+    "priority": "Media",
+    "status": "Bloqueado",
+    "type": "Funcional",
+    "owner": "Julian",
+    "steps": [
+      {"stepDescription": "Intentar exportar datos", "data": "(N/A)", "expectedResults": "No existe opción de exportación en CLI"},
+      {"stepDescription": "Validar codificación", "data": "(N/A)", "expectedResults": "Caso bloqueado: no se puede validar desde CLI"}
+    ]
+  },
+  {
+    "title": "HU-009 CA-8: Mensaje de confirmación tras exportar",
+    "description": "Validar que se muestra un mensaje de confirmación después de exportar",
+    "preconditions": "Usuario actual seleccionado, proyecto actual abierto",
+    "priority": "Media",
+    "status": "Bloqueado",
+    "type": "Funcional",
+    "owner": "Jeferson",
+    "steps": [
+      {"stepDescription": "Intentar exportar datos", "data": "(N/A)", "expectedResults": "No existe opción de exportación en CLI"},
+      {"stepDescription": "Verificar confirmación", "data": "(N/A)", "expectedResults": "Caso bloqueado: no hay mensaje de confirmación implementado"}
+    ]
+  },
+  {
+    "title": "HU-009 CA-9: Datos completos, precisos y consistentes",
+    "description": "Validar que los datos exportados son completos, precisos y consistentes",
+    "preconditions": "Usuario actual seleccionado, proyecto actual abierto",
+    "priority": "Media",
+    "status": "Bloqueado",
+    "type": "Funcional",
+    "owner": "Julian",
+    "steps": [
+      {"stepDescription": "Intentar exportar datos", "data": "(N/A)", "expectedResults": "No existe opción de exportación en CLI"},
+      {"stepDescription": "Validar integridad de datos", "data": "(N/A)", "expectedResults": "Caso bloqueado: no se puede validar desde CLI"}
+    ]
+  },
+  {
+    "title": "HU-009 CA-10: Eficiencia del proceso de exportación",
+    "description": "Validar que el proceso de exportación es eficiente incluso con muchas tareas",
+    "preconditions": "Usuario actual seleccionado, proyecto actual abierto",
+    "priority": "Media",
+    "status": "Bloqueado",
+    "type": "Funcional",
+    "owner": "Jeferson",
+    "steps": [
+      {"stepDescription": "Intentar exportar datos", "data": "(N/A)", "expectedResults": "No existe opción de exportación en CLI"},
+      {"stepDescription": "Medir tiempo de exportación", "data": "(N/A)", "expectedResults": "Caso bloqueado: no se puede validar desde CLI"}
+    ]
+  }
+]
