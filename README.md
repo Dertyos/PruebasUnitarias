@@ -30,3 +30,17 @@ python main.py
 4. Trabajar con tareas en "Trabajar con Proyecto Actual"
 
 Ver QUICK_START.md para más información.
+
+
+## Testeo
+
+```bash
+# Ejecutar todas las pruebas
+pytest
+
+# Ejecutar con detalles
+pytest -v
+
+# Ejecutar con cobertura
+pytest --cov=. --cov-report=html
+```
